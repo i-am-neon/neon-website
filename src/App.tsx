@@ -3,6 +3,7 @@ import store from 'store2';
 import { useState, useRef, useEffect, MutableRefObject } from "react";
 import MainCard from "./components/MainCard";
 import { updateColorFromIndex, COLORS, getNextColor } from "./utils/getNextColor";
+import Head from './components/Head';
 
 function App() {
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
@@ -52,13 +53,18 @@ function App() {
       setCurrentColorIndex(colorIndex);
       setCurrentColor(COLORS[colorIndex])
     }
-  }, []);
+  }, [themeStore]);
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", currentColor);
+    }
+  }, [currentColor]);
 
   return (
     <div className='selection:bg-primary flex flex-col w-full min-h-screen overflow-hidden text-white font-mono selection:text-gray-800'>
-      <Helmet>
-        <meta name="theme-color" content={currentColor} />
-      </Helmet>
+      <Head />
       <div className="z-10 grid place-items-center">
         <MainCard
           clickOutsideRef={clickOutsideRef}
@@ -66,10 +72,6 @@ function App() {
           colorIndex={currentColorIndex}
           setNextColor={setNextColor}
         />
-        {/* <div className="text-white font-mono selection:text-gray-800 selection:bg-primary relative inline-block align-bottom bg-slate-800 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-3xl sm:w-full sm:p-6">
-        <ProjectsContent />
-        <FunContent />
-      </div> */}
       </div>
     </div>
   );
