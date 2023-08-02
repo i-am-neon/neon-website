@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet';
 import store from 'store2';
 import { useState, useRef, useEffect, MutableRefObject } from "react";
 import MainCard from "./components/MainCard";
-import PsychadelicWaves from "./components/PsychadelicWaves/PsychadelicWaves";
 import { updateColorFromIndex, COLORS, getNextColor } from "./utils/getNextColor";
 
 function App() {
