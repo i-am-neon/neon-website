@@ -60,9 +60,6 @@ function App() {
       <Helmet>
         <meta name="theme-color" content={currentColor} />
       </Helmet>
-      <div className="z-0">
-        <PsychadelicWaves />
-      </div>
       <div className="z-10 grid place-items-center">
         <MainCard
           clickOutsideRef={clickOutsideRef}

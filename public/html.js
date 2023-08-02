@@ -11,11 +11,6 @@ module.exports = `<!DOCTYPE html>
 <!-- partial:index.partial.html -->
 <div class="world"></div>
 
-<script>
-    console.log("Something");
-</script>
-
-
 <script type="x-shader/x-fragment" id="fragmentShader">
 	precision highp float;
 

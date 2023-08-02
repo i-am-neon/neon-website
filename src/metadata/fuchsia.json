@@ -1,0 +1,20 @@
+{
+    "name": "NΞ◎N's Color Changing Noun [Fuchsia]",
+    "description": "# 💞 `Right now I'm Fuchsia!` 💞 \n\n I'm a derivative [Noun](https://nouns.wtf/) that changes color every time you look at me. \n\n *If you're on OpenSea, try clicking the \"Refresh Metadata\" button in the top right of this screen then refresh the page.*",
+    "image": "https://arweave.net/2zDA-tYj6vQE4ga_pnsXvSpt2gVTZtHBNPl4DdjspHc",
+    "external_url": "https://www.0xneon.xyz/",
+    "attributes": [
+        {
+            "trait_type": "Color",
+            "value": "Fuchsia"
+        },
+        {
+            "trait_type": "Personality",
+            "value": "Energized"
+        },
+        {
+            "trait_type": "Favorite Snack",
+            "value": "Pomegranates"
+        }
+    ]
+}
