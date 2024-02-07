@@ -21,11 +21,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="%PUBLIC_URL%/psychedelicBackground.css"
-    />
+    /> -->
 
     <title>NΞ◎N</title>
   </head>
@@ -37,7 +37,7 @@
     <div id="root"></div>
 
     <!-- BEGIN PSYCHEDELIC BACKGROUND -->
-    <script type="x-shader/x-fragment" id="fragmentShader">
+    <!-- <script type="x-shader/x-fragment" id="fragmentShader">
       precision highp float;
 
       uniform float uTime;
@@ -199,9 +199,9 @@
 
         gl_FragColor = vec4(col, 1.);
       }
-    </script>
+    </script> -->
 
-    <script type="x-shader/x-vertex" id="vertexShader">
+    <!-- <script type="x-shader/x-vertex" id="vertexShader">
       // attributes of our mesh
       attribute vec3 position;
       attribute vec2 uv;
@@ -223,25 +223,14 @@
         vec4 pos = vec4(position, 1.0);
         gl_Position = pos;
       }
-    </script>
+    </script> -->
     <!-- partial -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
 
-    <script src="%PUBLIC_URL%/psychedelicBackground.js"></script>
+    <!-- <script src="%PUBLIC_URL%/psychedelicBackground.js"></script> -->
 
     <!-- END psychedelic background -->
-
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
 
