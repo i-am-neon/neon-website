@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import vertexShader from '../utils/psychedelicBackground/vertexShader';
 import fragmentShader from '../utils/psychedelicBackground/fragmentShader';
@@ -8,8 +8,8 @@ const colorIndexToHueValue = [0.2, 0.45, 0.05, 0.65, 0.6];
 
 const PsychedelicBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
-
     const { currentColorIndex } = useColor();
+    const [currentHue, setCurrentHue] = useState(colorIndexToHueValue[currentColorIndex] ?? 0.5);
 
     useEffect(() => {
         if (!mountRef.current) return;
@@ -24,17 +24,13 @@ const PsychedelicBackground: React.FC = () => {
         const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
         camera.position.z = 5;
 
-        const colorIndexToHueValue = [0.2, 0.45, 0.05, 0.65, 0.6]; // Adjusted to array
-        const hueValue = colorIndexToHueValue[currentColorIndex] ?? 0.5; // Default to 0.5 if not found
-
         const uniforms = {
             uTime: { value: 0.0 },
             uMousePosition: { value: new THREE.Vector2(0.5, 0.5) },
-            uHue: { value: hueValue }, // Set from currentColor
+            uHue: { value: currentHue },
             uHueVariation: { value: 0.2 },
             uDensity: { value: 0.5 },
             uDisplacement: { value: 1.0 },
-            // Add other uniforms here
         };
 
         const shaderMaterial = new THREE.ShaderMaterial({
@@ -47,11 +43,20 @@ const PsychedelicBackground: React.FC = () => {
         const plane = new THREE.Mesh(planeGeometry, shaderMaterial);
         scene.add(plane);
 
+        let frameId: number;
+
         const animate = () => {
-            uniforms.uTime.value += 0.05; // Adjust time increment as needed
+            uniforms.uTime.value += 0.05; // Speed at which it flows ambiently
+            const targetHue = colorIndexToHueValue[currentColorIndex] ?? 0.5;
+            const transitionSeconds = 0.01;
+            uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds; // Smoothly interpolate hue value
+
+            setCurrentHue(uniforms.uHue.value); // Update state to trigger re-render if necessary
+
             renderer.render(scene, camera);
-            requestAnimationFrame(animate);
+            frameId = requestAnimationFrame(animate);
         };
+
         animate();
 
         window.addEventListener('resize', () => {
@@ -71,11 +76,12 @@ const PsychedelicBackground: React.FC = () => {
         });
 
         return () => {
-            // Cleanup code
+            if (frameId) {
+                cancelAnimationFrame(frameId);
+            }
             mountRef.current?.removeChild(renderer.domElement);
-            // Cleanup for window event listeners would also go here
         };
-    }, [currentColorIndex]); // Depend on currentColor to re-run setup if it changes
+    }, [currentColorIndex]); // React to changes in currentColorIndex
 
 
     return <div ref={mountRef} className="w-full h-full"></div>;
