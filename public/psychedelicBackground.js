@@ -169,7 +169,7 @@ function handleMouseMove(e) {
   world.mouseMove(mousePos);
 }
 
-const colorMapping = {
+const colorIndexToHueValue = {
   0: .2,   // Green
   1: .45, // Cyan
   2: .05, // Amber
@@ -183,7 +183,7 @@ function updateColor() {
     localStorage.setItem('theme.primaryIndex', 0);
     colorIndex = 0;
   }
-  const newHue = colorMapping[colorIndex];
+  const newHue = colorIndexToHueValue[colorIndex];
 
   parameters.hue = newHue;
   updateParameters();
