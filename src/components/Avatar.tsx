@@ -1,17 +1,17 @@
-import { getColorNameFromIndex, getNextColor } from "../utils/getNextColor";
+import { getColorNameFromIndex } from "../utils/getNextColor";
 
 type AvatarProps = {
     colorIndex: number
     setNextColor: () => void
 }
 
-export default function Avatar(props: AvatarProps) {
-    const src = "avatars/" + getColorNameFromIndex(props.colorIndex) + ".png";
-    const alt = "Neon's " + getColorNameFromIndex(props.colorIndex) + " colored Noun"
+export default function Avatar({ colorIndex, setNextColor }: AvatarProps) {
+    const src = "avatars/" + getColorNameFromIndex(colorIndex) + ".png";
+    const alt = "Neon's " + getColorNameFromIndex(colorIndex) + " avatar"
     return (
         <a
             className="cursor-pointer"
-            onClick={props.setNextColor}
+            onClick={setNextColor}
         >
             <img
                 className="inline-block h-28 w-28"

@@ -3,7 +3,8 @@ class World {
 
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: true });
+      antialias: true
+    });
 
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(width, height);
@@ -37,7 +38,9 @@ class World {
         uGradient: { type: 'f', value: 1 },
         uDensity: { type: 'f', value: 1 },
         uDisplacement: { type: 'f', value: 1 },
-        uMousePosition: { type: 'v2', value: new THREE.Vector2(0.5, 0.5) } } });
+        uMousePosition: { type: 'v2', value: new THREE.Vector2(0.5, 0.5) }
+      }
+    });
 
 
     this.planeGeometry = new THREE.PlaneGeometry(2, 2, 1, 1);
@@ -73,7 +76,8 @@ class World {
   mouseMove(mousePos) {
     this.targetMousePos.x = mousePos.px;
     this.targetMousePos.y = mousePos.py;
-  }}
+  }
+}
 ;
 
 document.addEventListener("DOMContentLoaded", domIsReady);
@@ -88,7 +92,8 @@ let parameters = {
   hueVariation: .2,
   gradient: .3,
   density: .5,
-  displacement: 1 };
+  displacement: 1
+};
 
 
 
@@ -124,7 +129,7 @@ function initGui() {
   });
   /*
   guiGradient.onChange( function(value) {
-  	updateParameters();
+    updateParameters();
   });
   */
   guiDensity.onChange(function (value) {
@@ -165,10 +170,11 @@ function handleMouseMove(e) {
 }
 
 const colorMapping = {
-  0: .45, // Cyan
-  1: .65, // Fuchsia
-  2: .05, // Orange
-  3: .2   // Green
+  0: .2,   // Green
+  1: .45, // Cyan
+  2: .05, // Amber
+  3: .65, // Fuchsia
+  4: .6,  // White
 }
 
 function updateColor() {
