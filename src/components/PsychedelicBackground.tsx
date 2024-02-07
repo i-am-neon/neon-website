@@ -81,7 +81,8 @@ const PsychedelicBackground: React.FC = () => {
             }
             mountRef.current?.removeChild(renderer.domElement);
         };
-    }, [currentColorIndex]); // React to changes in currentColorIndex
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentColorIndex]); // React to changes in currentColorIndex but should NOT change for currentHue, which will cause re-renders
 
 
     return <div ref={mountRef} className="w-full h-full"></div>;
