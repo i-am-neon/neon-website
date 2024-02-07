@@ -5,17 +5,18 @@ import SkillsContent from "./content/SkillsContent";
 import Socials from "./Socials";
 import Avatar from "./Avatar";
 import FunContent from "./content/FunContent";
+import { useColor } from "../providers/ColorProvider";
 
 type MainCardProps = {
     clickOutsideRef: MutableRefObject<any>,
     ignoreRef: MutableRefObject<any>,
-    colorIndex: number,
-    setNextColor: () => void
 }
 
-export default function MainCard({ clickOutsideRef, ignoreRef, colorIndex, setNextColor }: MainCardProps): JSX.Element {
+export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps): JSX.Element {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(<></>);
+
+    const { setNextColor, currentColorIndex } = useColor();
 
     const openSkillsModal = (newModalContent: JSX.Element): void => {
         setIsModalOpen(true);
@@ -29,7 +30,7 @@ export default function MainCard({ clickOutsideRef, ignoreRef, colorIndex, setNe
                         NΞ◎N
                     </h1>
                     <Avatar
-                        colorIndex={colorIndex}
+                        colorIndex={currentColorIndex}
                         setNextColor={setNextColor}
                     />
                     <Socials />
