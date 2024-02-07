@@ -7,4 +7,4 @@ If you're using this repo for inspiration or grabbing some of the code, happy ha
 All the best,
 NΞ◎N
 
-![Green Avatar](public/avatars/green.png)
+<img src="public/avatars/green.png" alt="Green Avatar" style="max-width: 150px;" />
