@@ -1,15 +1,18 @@
-import { ColorNames, HexColors } from "../enums/Colors";
-export const COLORS: string[] = Object.values(HexColors);
+import { ColorName } from "../enums/ColorName";
+import { HexColor } from "../enums/HexColor";
+
+export const HEX_COLORS: HexColor[] = Object.values(HexColor);
+export const COLOR_NAMES: ColorName[] = Object.values(ColorName);
 
 export const getNextColorIndex = (currentColorIndex: number): number => {
-    return (currentColorIndex + 1) % COLORS.length;
+    return (currentColorIndex + 1) % HEX_COLORS.length;
 };
 
 export const updateDocumentColor = (colorHex: string): void => {
     document.documentElement.style.setProperty('--link-color', colorHex);
 };
 
-export const getColorNameFromIndex = (index: number): ColorNames => {
-    const colorValues = Object.values(ColorNames);
+export const getColorNameFromIndex = (index: number): ColorName => {
+    const colorValues = Object.values(ColorName);
     return colorValues[index] ?? colorValues[0];
 };

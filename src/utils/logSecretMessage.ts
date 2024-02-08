@@ -1,4 +1,4 @@
-import { HexColors } from "../enums/Colors";
+import { HexColor } from "../enums/HexColor";
 
 const asciiLines = [
     '//////////////////////////////////////////////////////////////////////',
@@ -25,7 +25,7 @@ export const logSecretMessage = (): void => {
     //   -webkit-background-clip: text;
     //   background-clip: text;
     //   `
-    const styling = 'color: ' + HexColors.cyan;
+    const styling = 'color: ' + HexColor.cyan;
 
     asciiLines.forEach(line => {
         console.log('%c' + line, styling);

@@ -1,10 +1,13 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 import store from 'store2';
-import { COLORS, updateDocumentColor } from "../utils/getNextColor"; // Ensure the import paths are correct
+import { COLOR_NAMES, HEX_COLORS, updateDocumentColor } from "../utils/getNextColor"; // Ensure the import paths are correct
+import { ColorName } from '../enums/ColorName';
+import { HexColor } from '../enums/HexColor';
 
 type ColorContextType = {
     currentColorIndex: number;
-    currentColor: string;
+    currentHexColor: HexColor;
+    currentColorName: ColorName;
     setNextColor: () => void;
 };
 
@@ -24,27 +27,30 @@ type ColorProviderProps = {
 
 export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
     const [currentColorIndex, setCurrentColorIndex] = useState(0);
-    const [currentColor, setCurrentColor] = useState('');
+    const [currentHexColor, setCurrentHexColor] = useState(HexColor.green);
+    const [currentColorName, setCurrentColorName] = useState(ColorName.green);
 
     useEffect(() => {
         const themeStore = store.namespace('theme');
         let colorIndex = themeStore.get('primaryIndex') || 0;
         setCurrentColorIndex(colorIndex);
-        setCurrentColor(COLORS[colorIndex]);
-        updateDocumentColor(COLORS[colorIndex]);
+        setCurrentHexColor(HEX_COLORS[colorIndex]);
+        setCurrentColorName(COLOR_NAMES[colorIndex]);
+        updateDocumentColor(HEX_COLORS[colorIndex]);
     }, []);
 
     const setNextColor = (): void => {
         const themeStore = store.namespace('theme');
-        let newColorIndex = (currentColorIndex + 1) % COLORS.length;
+        let newColorIndex = (currentColorIndex + 1) % HEX_COLORS.length;
         setCurrentColorIndex(newColorIndex);
-        setCurrentColor(COLORS[newColorIndex]);
+        setCurrentHexColor(HEX_COLORS[newColorIndex]);
+        setCurrentColorName(COLOR_NAMES[newColorIndex]);
         themeStore.set('primaryIndex', newColorIndex);
-        updateDocumentColor(COLORS[newColorIndex]);
+        updateDocumentColor(HEX_COLORS[newColorIndex]);
     };
 
     return (
-        <ColorContext.Provider value={{ currentColorIndex, currentColor, setNextColor }}>
+        <ColorContext.Provider value={{ currentColorIndex, currentHexColor, currentColorName, setNextColor }}>
             {children}
         </ColorContext.Provider>
     );
