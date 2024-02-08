@@ -33,17 +33,18 @@ function App() {
   useClickOutside(clickOutsideRef, ignoreRef, setNextColor);
 
   return (
-    <PsychedelicBackgroundWrapper>
-      <div className='selection:bg-primary flex flex-col w-full min-h-screen overflow-hidden text-white font-mono selection:text-gray-800'>
-        <Head />
-        <div className="z-10 grid place-items-center">
+    <>
+      <Head />
+      <PsychedelicBackgroundWrapper>
+        <div className='selection:bg-primary flex flex-col w-full min-h-screen overflow-hidden text-white font-mono selection:text-gray-800'>
           <MainCard
             clickOutsideRef={clickOutsideRef}
             ignoreRef={ignoreRef}
           />
         </div>
-      </div>
-    </PsychedelicBackgroundWrapper>);
+      </PsychedelicBackgroundWrapper>
+    </>
+  );
 }
 
 export default App;
