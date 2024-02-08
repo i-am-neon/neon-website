@@ -12,7 +12,8 @@ const PsychedelicBackground: React.FC = () => {
     const [currentHue, setCurrentHue] = useState(colorIndexToHueValue[currentColorIndex] ?? 0.5);
 
     useEffect(() => {
-        if (!mountRef.current) return;
+        const mount = mountRef.current; // Copy the current value of mountRef to a variable
+        if (!mount) return;
 
         const width = mountRef.current.clientWidth;
         const height = mountRef.current.clientHeight;
@@ -79,7 +80,7 @@ const PsychedelicBackground: React.FC = () => {
             if (frameId) {
                 cancelAnimationFrame(frameId);
             }
-            mountRef.current?.removeChild(renderer.domElement);
+            mount.removeChild(renderer.domElement);
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentColorIndex]); // React to changes in currentColorIndex but should NOT change for currentHue, which will cause re-renders
