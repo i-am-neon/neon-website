@@ -1,11 +1,10 @@
 import { MutableRefObject, useState } from "react";
+import Avatar from "./Avatar";
 import Modal from "./Modal";
+import Socials from "./Socials";
+import FunContent from "./content/FunContent";
 import ProjectsContent from "./content/ProjectsContent";
 import SkillsContent from "./content/SkillsContent";
-import Socials from "./Socials";
-import Avatar from "./Avatar";
-import FunContent from "./content/FunContent";
-import { useColor } from "../providers/ColorProvider";
 
 type MainCardProps = {
     clickOutsideRef: MutableRefObject<any>,
@@ -16,54 +15,44 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(<></>);
 
-    const { setNextColor, currentColorIndex } = useColor();
-
-    const openSkillsModal = (newModalContent: JSX.Element): void => {
+    const openModal = (newModalContent: JSX.Element): void => {
         setIsModalOpen(true);
         setModalContent(newModalContent);
     }
     return (
         <div>
-            <div id="mainCard" ref={clickOutsideRef} className="flex items-center justify-between p-6 space-x-6 bg-slate-800 rounded-lg mx-16 md:mx-52 lg:mx-96 xl:mx-0 xl:w-96 mt-16 sm:mt-32">
-                <div>
+            <div ref={clickOutsideRef} className="flex w-full items-center place-content-center p-6 bg-slate-800 rounded-lg mt-16 sm:mt-32 max-w-lg mx-auto">
+                <div className="w-1/3 flex flex-col items-center">
                     <h1 className='text-primary mt-2 mb-0 text-4xl'>
                         NΞ◎N
                     </h1>
-                    <Avatar
-                        colorIndex={currentColorIndex}
-                        setNextColor={setNextColor}
-                    />
-                    <Socials />
-                </div>
-                <div>
+                    <Avatar />
+                    <div className="mt-2">
+                        <Socials />
+                    </div>
                     <p className='mt-4'>I&apos;m
-                        a <span className='text-primary'>builder</span></p>
-                    <br />
-                    <br />
+                        a <span className='text-primary'>builder</span>
+                    </p>
+                </div>
+                <div className="w-2/3 flex flex-col items-center gap-3">
                     <button
                         className="text-xl underline decoration-primary"
-                        onClick={() => openSkillsModal(<SkillsContent />)}
+                        onClick={() => openModal(<SkillsContent />)}
                     >
                         skills
                     </button>
-                    <br />
-                    <br />
                     <button
                         className="text-xl underline decoration-primary"
-                        onClick={() => openSkillsModal(<ProjectsContent />)}
+                        onClick={() => openModal(<ProjectsContent />)}
                     >
                         projects
                     </button>
-                    <br />
-                    <br />
                     <button
                         className="text-xl underline decoration-primary"
-                        onClick={() => openSkillsModal(<FunContent />)}
+                        onClick={() => openModal(<FunContent />)}
                     >
                         fun
                     </button>
-                    <br />
-                    <br />
                 </div>
             </div>
             <Modal

@@ -1,15 +1,13 @@
+import { useColor } from "../providers/ColorProvider";
 import { getColorNameFromIndex } from "../utils/getNextColor";
 
-type AvatarProps = {
-    colorIndex: number
-    setNextColor: () => void
-}
+export default function Avatar() {
+    const { setNextColor, currentColorIndex } = useColor();
 
-export default function Avatar({ colorIndex, setNextColor }: AvatarProps) {
-    const src = "avatars/" + getColorNameFromIndex(colorIndex) + ".png";
-    const alt = "Neon's " + getColorNameFromIndex(colorIndex) + " avatar"
+    const src = "avatars/" + getColorNameFromIndex(currentColorIndex) + ".png";
+    const alt = "Neon's " + getColorNameFromIndex(currentColorIndex) + " avatar"
     return (
-        <a
+        <button
             className="cursor-pointer"
             onClick={setNextColor}
         >
@@ -18,6 +16,6 @@ export default function Avatar({ colorIndex, setNextColor }: AvatarProps) {
                 src={src}
                 alt={alt}
             />
-        </a>
+        </button>
     )
 }
