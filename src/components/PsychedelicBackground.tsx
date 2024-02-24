@@ -12,14 +12,14 @@ const PsychedelicBackground: React.FC = () => {
     const [currentHue, setCurrentHue] = useState(colorIndexToHueValue[currentColorIndex] ?? 0.5);
 
     useEffect(() => {
-        const mount = mountRef.current; // Copy the current value of mountRef to a variable
+        const mount = mountRef.current; // Ensure mount is directly used from ref
         if (!mount) return;
 
-        const width = mountRef.current.clientWidth;
-        const height = mountRef.current.clientHeight;
+        const width = mount.clientWidth;
+        const height = mount.clientHeight;
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(width, height);
-        mountRef.current.appendChild(renderer.domElement);
+        mount.appendChild(renderer.domElement);
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
@@ -50,9 +50,9 @@ const PsychedelicBackground: React.FC = () => {
             uniforms.uTime.value += 0.05; // Speed at which it flows ambiently
             const targetHue = colorIndexToHueValue[currentColorIndex] ?? 0.5;
             const transitionSeconds = 0.01;
-            uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds; // Smoothly interpolate hue value
+            uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds;
 
-            setCurrentHue(uniforms.uHue.value); // Update state to trigger re-render if necessary
+            setCurrentHue(uniforms.uHue.value);
 
             renderer.render(scene, camera);
             frameId = requestAnimationFrame(animate);
@@ -60,31 +60,41 @@ const PsychedelicBackground: React.FC = () => {
 
         animate();
 
-        window.addEventListener('resize', () => {
-            if (!mountRef.current) {
-                return;
-            }
-            const width = mountRef.current.clientWidth;
-            const height = mountRef.current.clientHeight;
+        const onWindowResize = () => {
+            if (!mount) return;
+            const width = mount.clientWidth;
+            const height = mount.clientHeight;
             renderer.setSize(width, height);
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
-        });
+        };
 
-        window.addEventListener('mousemove', (event: MouseEvent) => {
+        const onMouseMove = (event: MouseEvent) => {
             uniforms.uMousePosition.value.x = event.clientX / window.innerWidth;
             uniforms.uMousePosition.value.y = 1.0 - event.clientY / window.innerHeight;
-        });
+        };
+
+        const onTouchMove = (event: TouchEvent) => {
+            if (event.touches.length > 0) {
+                const touch = event.touches[0];
+                uniforms.uMousePosition.value.x = touch.clientX / window.innerWidth;
+                uniforms.uMousePosition.value.y = 1.0 - touch.clientY / window.innerHeight;
+            }
+        };
+
+        window.addEventListener('resize', onWindowResize);
+        window.addEventListener('mousemove', onMouseMove);
+        window.addEventListener('touchmove', onTouchMove);
 
         return () => {
-            if (frameId) {
-                cancelAnimationFrame(frameId);
-            }
+            if (frameId) cancelAnimationFrame(frameId);
             mount.removeChild(renderer.domElement);
+            window.removeEventListener('resize', onWindowResize);
+            window.removeEventListener('mousemove', onMouseMove);
+            window.removeEventListener('touchmove', onTouchMove);
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentColorIndex]); // React to changes in currentColorIndex but should NOT change for currentHue, which will cause re-renders
-
 
     return <div ref={mountRef} className="w-full h-full"></div>;
 };
