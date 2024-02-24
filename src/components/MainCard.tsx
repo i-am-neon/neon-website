@@ -21,8 +21,8 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
     }
     return (
         <div>
-            <div ref={clickOutsideRef} className="flex w-full items-center place-content-center p-6 bg-slate-800 rounded-lg mt-16 sm:mt-32 max-w-2xl mx-auto">
-                <div className="w-1/2 flex flex-col items-center">
+            <div ref={clickOutsideRef} className="flex flex-col md:flex-row md:w-full items-center place-content-center p-6 bg-slate-800 rounded-lg mt-16 md:mt-32 max-w-2xl mx-4 md:mx-auto">
+                <div className="sm:w-1/2 flex flex-col items-center">
                     <h1 className='text-primary mt-2 mb-0 text-4xl'>
                         NΞ◎N
                     </h1>
@@ -30,11 +30,9 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
                     <div className="mt-2">
                         <Socials />
                     </div>
-                    <p className='mt-4'>I&apos;m
-                        a <span className='text-primary'>builder</span>
-                    </p>
+                    <p className='my-4 text-primary'>Artist & Engineer</p>
                 </div>
-                <div className="w-1/2 flex flex-col items-center gap-3">
+                <div className="sm:w-1/2 flex flex-col items-center gap-3">
                     <button
                         className="text-xl underline decoration-primary"
                         onClick={() => openModal(<SkillsContent />)}
