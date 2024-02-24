@@ -3,6 +3,15 @@ import { useCallback, useEffect, useState } from 'react';
 import { useColor } from "../providers/ColorProvider";
 import { getColorNameFromIndex } from "../utils/getNextColor";
 
+const NUMBER_OF_COLORS = 5;
+
+const preloadImages = (colorIndexes: number[]) => {
+    colorIndexes.forEach((index) => {
+        const img = new Image();
+        img.src = `avatars/${getColorNameFromIndex(index)}.png`;
+    });
+};
+
 export default function Avatar() {
     const { setNextColor, currentColorIndex } = useColor();
     const [currentSrc, setCurrentSrc] = useState("");
@@ -10,12 +19,18 @@ export default function Avatar() {
     const [animating, setAnimating] = useState(false);
 
     useEffect(() => {
+        // Preload images on component mount
+        // Here you need to pass an array of all possible color indexes
+        // Adjust this according to how getColorNameFromIndex and your color index system works
+        const allColorIndexes = [...Array(NUMBER_OF_COLORS)]; // Replace YOUR_NUMBER_OF_COLORS with actual number
+        preloadImages(allColorIndexes);
+
         const newSrc = `avatars/${getColorNameFromIndex(currentColorIndex)}.png`;
         setNextSrc(newSrc);
         if (!animating) {
             setCurrentSrc(newSrc);
         }
-    }, [currentColorIndex, animating, setNextColor]);
+    }, [currentColorIndex, animating]);
 
     const handleClick = useCallback(() => {
         setAnimating(!animating); // Toggle animation state to trigger Transition
