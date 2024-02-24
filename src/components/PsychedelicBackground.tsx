@@ -4,7 +4,7 @@ import vertexShader from '../utils/psychedelicBackground/vertexShader';
 import fragmentShader from '../utils/psychedelicBackground/fragmentShader';
 import { useColor } from '../providers/ColorProvider';
 
-const colorIndexToHueValue = [0.2, 0.45, 0.05, 0.65, 0.6];
+const colorIndexToHueValue = [0.3, 0.45, 0, 0.65, 0.85];
 
 const PsychedelicBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ const PsychedelicBackground: React.FC = () => {
         const animate = () => {
             uniforms.uTime.value += 0.05; // Speed at which it flows ambiently
             const targetHue = colorIndexToHueValue[currentColorIndex] ?? 0.5;
-            const transitionSeconds = 0.01;
+            const transitionSeconds = 0.05;
             uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds;
 
             setCurrentHue(uniforms.uHue.value);
