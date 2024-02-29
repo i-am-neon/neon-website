@@ -24,7 +24,7 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
             <div ref={clickOutsideRef} className="flex flex-col md:flex-row md:w-full items-center place-content-center p-6 bg-slate-800 rounded-lg mt-16 md:mt-32 max-w-2xl mx-4 md:mx-auto">
                 <div className="sm:w-1/2 flex flex-col items-center">
                     <Avatar />
-                    <h1 className='font-dunerise text-primary mt-2  text-4xl'>
+                    <h1 className='font-dunerise text-primary mt-2 text-4xl'>
                         neon
                     </h1>
                     <p className='my-2'>Artist & Engineer</p>
@@ -32,7 +32,7 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
                         <Socials />
                     </div>
                 </div>
-                <div className="sm:w-1/2 flex flex-col items-center gap-3">
+                <div className="sm:w-1/2 flex flex-col items-center gap-3 pt-2 sm:pt-0">
                     <button
                         className="text-xl underline decoration-primary"
                         onClick={() => openModal(<SkillsContent />)}
