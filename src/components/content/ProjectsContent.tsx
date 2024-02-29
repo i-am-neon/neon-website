@@ -1,4 +1,4 @@
-import { currentProjectsContent, daoMembershipContent, learningCohorsContent, pastProjectsContent } from "../../utils/dropdownContent";
+import { currentProjectsContent, learningCohorsContent, pastProjectsContent } from "../../utils/dropdownContent";
 import DropdownSection from "../DropdownSection";
 
 export default function ProjectsContent(): JSX.Element {

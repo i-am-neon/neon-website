@@ -1,5 +1,5 @@
+import { GITHUB_URL, TWITTER_URL } from "../constants";
 import GitHubLink from "./GitHubLink";
-import { GITHUB_URL, TWITTER_URL, EMAIL_URL } from "../constants";
 
 export default function Socials() {
     return (

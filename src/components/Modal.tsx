@@ -1,6 +1,6 @@
-import { Dispatch, Fragment, MutableRefObject, SetStateAction, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/solid'
+import { Dispatch, Fragment, MutableRefObject, SetStateAction } from 'react'
 
 type ModalProps = {
     open: boolean
