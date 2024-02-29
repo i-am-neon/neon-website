@@ -17,8 +17,7 @@ export const currentProjectsContent: DropdownSectionItem[] = [
                 >
                     Ethos
                 </a>
-                {' '}makes it easy for people without wallets to use dApps and for dApp devs
-                to expand their audience. Starting on the
+                {' '}is a top wallet on the
                 {' '}<a
                     href="https://sui.io/"
                     target='_blank'
@@ -26,7 +25,7 @@ export const currentProjectsContent: DropdownSectionItem[] = [
                     className="text-primary underline"
                 >
                     Sui blockchain
-                </a> and coming soon to many more.
+                </a> that is often praised for its user experience.
             </p>
         )
     } as DropdownSectionItem,
