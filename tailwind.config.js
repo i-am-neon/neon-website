@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         primary: 'var(--link-color)'
       },
+      fontFamily: {
+        'dunerise': ['DuneRise', 'sans-serif'],
+      },
     },
   },
   plugins: [],

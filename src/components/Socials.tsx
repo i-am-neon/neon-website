@@ -3,7 +3,7 @@ import { GITHUB_URL, TWITTER_URL, EMAIL_URL } from "../constants";
 
 export default function Socials() {
     return (
-        <div className="flex justify-center space-x-6 md:order-2">
+        <div className="flex space-x-6 md:order-2">
             <a
                 href={TWITTER_URL}
                 target='_blank'
