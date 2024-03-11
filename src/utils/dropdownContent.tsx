@@ -25,7 +25,7 @@ export const currentProjectsContent: DropdownSectionItem[] = [
                     className="text-primary underline"
                 >
                     Sui blockchain
-                </a> that is often praised for its user experience.
+                </a> with over 100k users that is often praised for its user experience.
             </p>
         )
     } as DropdownSectionItem,
