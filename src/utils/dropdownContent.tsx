@@ -36,6 +36,8 @@ export const pastProjectsContent: DropdownSectionItem[] = [
         heading: 'AI Haiku',
         content: (
             <p>
+                <i>Using the beta release of GPT-3 + Ethereum + Arweave</i>
+                <br /><br />
                 I&apos;ve made a few NFT collections, but <a
                     href="https://www.aihaiku.art/"
                     target='_blank'
