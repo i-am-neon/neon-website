@@ -22,11 +22,6 @@ export default function FunContent(): JSX.Element {
                     NFT Gallery
                 </a>
             </p>
-            <p>
-                I&apos;m sure you came here to pay me, right...?
-                <br />
-                0xNeon.eth | 🔥‍‍‍‍.eth | 🏄‍♂️.sol | 0xNeon.tez
-            </p>
         </div>
     )
 }
