@@ -1,16 +1,57 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import { DropdownSectionItem } from '../types/DropdownSectionItem'
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+import { useState, useEffect, useRef } from 'react';
+import { Disclosure } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { DropdownSectionItem } from '../types/DropdownSectionItem';
 
 type DropdownSectionProps = {
   title: JSX.Element,
   content: DropdownSectionItem[]
-}
+};
+
+const heightAdjustment = 20; // make up for padding/margin
+
+const AnimatedPanel: React.FC<{ children: React.ReactNode, open: boolean }> = ({ children, open }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        if (open) {
+          setHeight(entry.target.scrollHeight + heightAdjustment);
+        }
+      }
+    });
+
+    if (ref.current) {
+      resizeObserver.observe(ref.current);
+    }
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (open && ref.current) {
+      setHeight(ref.current.scrollHeight + heightAdjustment);
+    } else {
+      setHeight(0);
+    }
+  }, [open, children]);
+
+  return (
+    <Disclosure.Panel
+      as="dd"
+      className="overflow-hidden transition-height duration-300 ease-in-out"
+      style={{ height: `${height}px` }}
+    >
+      <div ref={ref}>
+        {children}
+      </div>
+    </Disclosure.Panel>
+  );
+};
 
 export default function DropdownSection(props: DropdownSectionProps) {
   return (
@@ -27,22 +68,18 @@ export default function DropdownSection(props: DropdownSectionProps) {
                       <Disclosure.Button className="text-left w-full flex items-start text-white">
                         <span className="mr-6 h-7 flex items-center">
                           <ChevronDownIcon
-                            className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform text-primary')}
+                            className={`transform transition-transform duration-300 ${open ? '-rotate-180' : 'rotate-0'} h-6 w-6 text-primary`}
                             aria-hidden="true"
                           />
                         </span>
                         <span className="font-medium text-inherit">{item.heading}</span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12 flex">
-                      <span className="mr-6 h-7 flex items-center">
-                        <ChevronDownIcon
-                          className='h-6 w-6 transform text-transparent'
-                          aria-hidden="true"
-                        />
-                      </span>
-                      {item.content}
-                    </Disclosure.Panel>
+                    <AnimatedPanel open={open}>
+                      <div className="mt-2 pr-12 flex items-center">
+                        {item.content}
+                      </div>
+                    </AnimatedPanel>
                   </>
                 )}
               </Disclosure>
@@ -51,5 +88,5 @@ export default function DropdownSection(props: DropdownSectionProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

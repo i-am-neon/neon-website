@@ -16,10 +16,6 @@ export default function ProjectsContent(): JSX.Element {
                 title={<span>Learning cohorts</span>}
                 content={learningCohorsContent}
             />
-            {/* <DropdownSection
-                title={<span>DAO membership</span>}
-                content={daoMembershipContent}
-            /> */}
         </>
     )
 }
