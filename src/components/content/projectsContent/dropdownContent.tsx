@@ -211,6 +211,35 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
             </p>
         )
     } as DropdownSectionItem,
+    {
+        heading: (<span className="flex items-center">Cryptocurrency Mining Rigs<OpenSourceBadge /></span>),
+        content: (
+            <p>
+                <i>April - Dec '21</i>
+                <br /><br />
+                I learned a ton about Linux and hardware from these projects!
+                <br /><br />
+                <Carousel>
+                    <img src="miningRigs/dense.jpg" alt="" />
+                    <img src="miningRigs/rig-dog.jpg" alt="" />
+                </Carousel>
+                I Constructed five linux machines each with different specialized hardware for various cryptocurrency mining:
+                <br /><br />
+                <ul className="list-disc flex flex-col gap-2">
+                    <li><strong>Ethereum</strong>: High power and many graphics cards (back when Eth was Proof-of-Work)</li>
+                    <li><strong>Arweave and Chia</strong>: Dense storage computers totalling over half a petabyte</li>
+                    <li><strong>Monero</strong>: Strong CPUs with a lot of RAM</li>
+                </ul>
+                <br /><br />
+                I wrote advanced custom software to monitor and manage the hardware, including protocols for power outages.
+                <br /><br />
+                <div className="flex gap-2">
+                    <GitHubPillLink title="Eth Rig Controller" href="https://github.com/i-am-neon/ethereum-mining-rig-controller" />
+                    <GitHubPillLink title="Chia Plotter" href="https://github.com/i-am-neon/crypto-chia-plotter" />
+                </div>
+            </p>
+        )
+    } as DropdownSectionItem,
 ]
 
 export const learningCohorsContent: DropdownSectionItem[] = [
