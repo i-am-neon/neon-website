@@ -1,5 +1,5 @@
 import DropdownSection from "../../DropdownSection";
-import { currentProjectsContent, featuredSideProjectsContent, learningCohorsContent, web3ProjectsContent } from "./dropdownContent";
+import { currentProjectsContent, featuredSideProjectsContent, learningCohorsContent, physicalProjectsContent, web3ProjectsContent } from "./dropdownContent";
 
 export default function ProjectsContent(): JSX.Element {
     return (
@@ -15,6 +15,10 @@ export default function ProjectsContent(): JSX.Element {
             <DropdownSection
                 title={<span>Web3 Projects</span>}
                 content={web3ProjectsContent}
+            />
+            <DropdownSection
+                title={<span>Physical Projects</span>}
+                content={physicalProjectsContent}
             />
             <DropdownSection
                 title={<span>Learning cohorts</span>}

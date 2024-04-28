@@ -2,6 +2,8 @@ import { DropdownSectionItem } from "../../../types/DropdownSectionItem"
 import OpenSourceBadge from "../../OpenSourceBadge"
 import GitHubIconLink from "../../gitHubButtons/GitHubIconLink"
 import GitHubPillLink from "../../gitHubButtons/GitHubPillLink"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export const currentProjectsContent: DropdownSectionItem[] = [
     {
@@ -118,10 +120,16 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         heading: (<span className="flex items-center">Sol and Arweave atomic unit converters<OpenSourceBadge /></span>),
         content: (
             <p>
-                <img className="mx-auto" src="projectScreenshots/sol-converter.png" alt="SOL Converter" />
-                <br />
-                <img className="mx-auto" src="projectScreenshots/ar-converter.png" alt="AR Converter" />
-                <br />
+                <Carousel>
+                    <div>
+                        <img src="projectScreenshots/sol-converter.png" alt="SOL Converter" />
+                        <p className="legend">SOL Converter</p>
+                    </div>
+                    <div>
+                        <img src="projectScreenshots/ar-converter.png" alt="AR Converter" />
+                        <p className="legend">AR Converter</p>
+                    </div>
+                </Carousel>
                 Two online calculators to convert Solana and Arweave to their atomic units;
                 Lamport and Winston. Both are hosted permanently on Arweave.
                 <br /><br />
@@ -159,44 +167,29 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
     } as DropdownSectionItem,
 ]
 
-export const woodWorkingProjectsContent: DropdownSectionItem[] = [
+export const physicalProjectsContent: DropdownSectionItem[] = [
     {
-        heading: 'Rave Cape',
+        heading: 'Wood Working',
         content: (
             <p>
-                <img src="raveCape/rave-cape.gif" alt="" />
-                <br />
-                I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
-                <br /><br />
-                Open source mobile app and hardware schematics coming soon.
-            </p>
-        )
-    } as DropdownSectionItem,
-    {
-        heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
-        content: (
-            <p>
-                <i>Using the beta release of GPT-3 + Ethereum + Arweave</i>
-                <br /><br />
-                I&apos;ve made a few NFT collections, but <a
-                    href="https://www.aihaiku.art/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    AI Haiku
-                </a> is definitely my favorite.
-                <br /><br />
-                With a combination of generative art and natural
-                language processing, this project provides a space for people to collaborate with
-                an AI to create a poem that is eternalized on the blockchain. Minters also received
-                a physical copy of their haiku on real handmade paper from Japan.
-                <br /><br />
-                <div className="flex gap-2">
-                    <GitHubPillLink title="Frontend" href="https://github.com/i-am-neon/ai-haiku-frontend" />
-                    <GitHubPillLink title="Image Generator" href="https://github.com/i-am-neon/ai-haiku-frontend" />
-                    <GitHubPillLink title="Smart Contract" href="https://github.com/i-am-neon/ai-haiku-contract" />
-                </div>
+                <Carousel>
+                    <div>
+                        <img src="woodworking/sun.jpg" alt="" />
+                        <p className="legend">Sun</p>
+                    </div>
+                    <div>
+                        <img src="woodworking/moon.jpg" alt="" />
+                        <p className="legend">Moon</p>
+                    </div>
+                    <div>
+                        <img src="woodworking/divide.jpg" alt="" />
+                        <p className="legend">Divide</p>
+                    </div>
+                    <div>
+                        <img src="woodworking/peace.jpg" alt="" />
+                        <p className="legend">Peace</p>
+                    </div>
+                </Carousel>
             </p>
         )
     } as DropdownSectionItem,
