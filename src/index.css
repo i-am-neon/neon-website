@@ -17,3 +17,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* START tap animation */
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ringFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes ringFadeSecond {
+  0% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+.ring-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.ring-first {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: ringFade 1s ease-out forwards;
+}
+
+.ring-second {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Slightly less opaque */
+  animation: ringFadeSecond 2s ease-out forwards; /* Starts later and lasts slightly longer */
+}
+
+
+/* END tap animation */
