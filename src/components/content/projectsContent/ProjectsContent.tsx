@@ -5,7 +5,7 @@ export default function ProjectsContent(): JSX.Element {
     return (
         <>
             <DropdownSection
-                title={<span>I&apos;m currently working on</span>}
+                title={<span>Currently working as</span>}
                 content={currentProjectsContent}
             />
             <DropdownSection

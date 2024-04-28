@@ -1,6 +1,6 @@
 export default function SkillsContent() {
     return (
-        <div className="flex flex-col gap-8 sm:pl-8">
+        <div className="flex flex-col gap-8 pl-4 sm:pl-8">
             <div>
                 <h3 className="text-lg text-primary font-bold mb-2">
                     My Bread and Butter

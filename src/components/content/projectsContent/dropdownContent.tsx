@@ -39,7 +39,7 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
         heading: 'Rave Cape',
         content: (
             <p>
-                <img className="mx-auto" src="raveCape/rave-cape.gif" alt="" />
+                <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
                 <br />
                 <i>May '24</i>
                 <br /><br />
@@ -50,10 +50,11 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
+        heading: 'AI Haiku',
+        isOpenSource: true,
         content: (
             <p>
-                <img className="mx-auto" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
+                <img className="rounded-md" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
                 <br />
                 <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
                 <br /><br />
@@ -83,7 +84,8 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
 
 export const web3ProjectsContent: DropdownSectionItem[] = [
     {
-        heading: (<span className="flex items-center">Color Changing Noun NFT<OpenSourceBadge /></span>),
+        heading: 'Color Changing Noun NFT',
+        isOpenSource: true,
         content: (
             <p>
                 <img className="mx-auto" src="https://media.giphy.com/media/7SrmPnpz1mI2bvdmRy/giphy.gif" alt="color changing Noun" />
@@ -104,7 +106,8 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span className="flex items-center">Arweave NFT asset uploader NPM package<OpenSourceBadge /></span>),
+        heading: 'Arweave NFT asset uploader NPM package',
+        isOpenSource: true,
         content: (
             <p>
                 An NPM Package with over 1,000 downloads that makes it easy to upload
@@ -117,7 +120,8 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span className="flex items-center">Sol and Arweave atomic unit converters<OpenSourceBadge /></span>),
+        heading: 'Sol and Arweave atomic unit converters',
+        isOpenSource: true,
         content: (
             <p>
                 <Carousel>
@@ -212,7 +216,8 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span className="flex items-center">Cryptocurrency Mining Rigs<OpenSourceBadge /></span>),
+        heading: 'Cryptocurrency Mining Rigs',
+        isOpenSource: true,
         content: (
             <p>
                 <i>April - Dec '21</i>
