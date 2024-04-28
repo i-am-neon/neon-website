@@ -33,7 +33,7 @@ export const currentProjectsContent: DropdownSectionItem[] = [
 
 export const pastProjectsContent: DropdownSectionItem[] = [
     {
-        heading: 'AI Haiku',
+        heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
         content: (
             <p>
                 <i>Using the beta release of GPT-3 + Ethereum + Arweave</i>
@@ -55,7 +55,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span>Color Changing Noun NFT<OpenSourceBadge /></span>),
+        heading: (<span className="flex items-center">Color Changing Noun NFT<OpenSourceBadge /></span>),
         content: (
             <p>
                 A <a
@@ -74,7 +74,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span>Arweave NFT asset uploader NPM package<OpenSourceBadge /></span>),
+        heading: (<span className="flex items-center">Arweave NFT asset uploader NPM package<OpenSourceBadge /></span>),
         content: (
             <p>
                 An NPM Package with over 1,000 downloads that makes it easy to upload
@@ -87,7 +87,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
         )
     } as DropdownSectionItem,
     {
-        heading: (<span>Sol and Arweave atomic unit converters<OpenSourceBadge /></span>),
+        heading: (<span className="flex items-center">Sol and Arweave atomic unit converters<OpenSourceBadge /></span>),
         content: (
             <p>
                 Two online calculators to convert Solana and Arweave to their atomic units;
@@ -125,53 +125,9 @@ export const pastProjectsContent: DropdownSectionItem[] = [
             </p>
         )
     } as DropdownSectionItem,
-    // {
-    //     heading: 'Candid',
-    //     content: (
-    //         <p>
-    //             <a
-    //                 href="https://candid.party/"
-    //                 target='_blank'
-    //                 rel="noreferrer"
-    //                 className="text-primary underline"
-    //             >
-    //                 candid.party
-    //             </a> is an on-chain profile experiment.
-    //             <br /><br />
-    //             I cofounded this
-    //             with <a
-    //                 href="https://twitter.com/nikita_builds"
-    //                 target='_blank'
-    //                 rel="noreferrer"
-    //                 className="text-primary underline"
-    //             >
-    //                 @nikita_builds
-    //             </a> during the Eth Denver '22 hackathon and he took over the project after we developed our MVP.
-    //         </p>
-    //     )
-    // } as DropdownSectionItem,
 ]
 
 export const learningCohorsContent: DropdownSectionItem[] = [
-    // {
-    //     heading: (
-    //         <span>Alliance DAO <i>(ALL9)</i></span>
-    //     ),
-    //     content: (
-    //         <p>
-    //             <a
-    //                 href="https://alliance.xyz/"
-    //                 target='_blank'
-    //                 rel="noreferrer"
-    //                 className="text-primary underline"
-    //             >
-    //                 Alliance
-    //             </a> is one of the world's best networks of Web3 founders and experts.
-    //             <br /><br />
-    //             Alliance has accepted the Ethos team into the September &apos;22 cohort.
-    //         </p>
-    //     )
-    // } as DropdownSectionItem,
     {
         heading: (
             <span>Kernel <i>(KB7)</i></span>
