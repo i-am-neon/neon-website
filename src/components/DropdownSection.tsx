@@ -12,10 +12,10 @@ const heightAdjustment = 20; // Adjust for padding/margin
 export default function DropdownSection({ title, content }: DropdownSectionProps) {
   return (
     <div className="bg-inherit">
-      <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-          <h2 className="text-center text-xl sm:text-2xl font-semibold text-inherit">{title}</h2>
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+      <div className="max-w-7xl mx-auto pt-3 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto divide-y-2 divide-white/20">
+          <h2 className="text-center text-xl sm:text-3xl font-semibold text-primary">{title}</h2>
+          <dl className="mt-6 space-y-6 divide-y divide-white/20">
             {content.map((item, key) => (
               <DropdownItem key={key} item={item} />
             ))}
@@ -54,7 +54,7 @@ const DropdownItem: React.FC<{ item: DropdownSectionItem }> = ({ item }) => {
       </dt>
       <dd className="overflow-hidden transition-height duration-300 ease-in-out" style={{ height: `${height}px` }}>
         <div ref={ref}>
-          <div className="mt-2 pr-12 flex items-center">
+          <div className="mt-2 flex items-center">
             {item.content}
           </div>
         </div>

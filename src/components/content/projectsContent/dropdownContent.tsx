@@ -37,8 +37,10 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
         heading: 'Rave Cape',
         content: (
             <p>
-                <img src="raveCape/rave-cape.gif" alt="" />
+                <img className="mx-auto" src="raveCape/rave-cape.gif" alt="" />
                 <br />
+                <i>May '24</i>
+                <br /><br />
                 I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
                 <br /><br />
                 Open source mobile app and hardware schematics coming soon.
@@ -49,7 +51,9 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
         heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
         content: (
             <p>
-                <i>Using the beta release of GPT-3 + Ethereum + Arweave</i>
+                <img className="mx-auto" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
+                <br />
+                <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
                 <br /><br />
                 I&apos;ve made a few NFT collections, but <a
                     href="https://www.aihaiku.art/"
@@ -80,7 +84,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         heading: (<span className="flex items-center">Color Changing Noun NFT<OpenSourceBadge /></span>),
         content: (
             <p>
-                A <a
+                <img className="mx-auto" src="https://media.giphy.com/media/7SrmPnpz1mI2bvdmRy/giphy.gif" alt="color changing Noun" />
+                <br />
+                With a cleverly-written Solidity smart contract, I created a <a
                     href="https://nouns.wtf/"
                     target='_blank'
                     rel="noreferrer"
@@ -112,6 +118,10 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         heading: (<span className="flex items-center">Sol and Arweave atomic unit converters<OpenSourceBadge /></span>),
         content: (
             <p>
+                <img className="mx-auto" src="projectScreenshots/sol-converter.png" alt="SOL Converter" />
+                <br />
+                <img className="mx-auto" src="projectScreenshots/ar-converter.png" alt="AR Converter" />
+                <br />
                 Two online calculators to convert Solana and Arweave to their atomic units;
                 Lamport and Winston. Both are hosted permanently on Arweave.
                 <br /><br />
