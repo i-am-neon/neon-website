@@ -193,6 +193,24 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
             </p>
         )
     } as DropdownSectionItem,
+    {
+        heading: 'Hologram Pyramid',
+        content: (
+            <p>
+                <i>Dec '17</i>
+                <br /><br />
+                <Carousel>
+                    <img src="hologramPyramid/fireworks.gif" alt="" />
+                    <img src="hologramPyramid/jellyfish.gif" alt="" />
+                    <img src="hologramPyramid/aura.gif" alt="" />
+                    <div>
+                        <img src="hologramPyramid/prototype.gif" alt="" />
+                        <p className="legend">Prototype</p>
+                    </div>
+                </Carousel>
+            </p>
+        )
+    } as DropdownSectionItem,
 ]
 
 export const learningCohorsContent: DropdownSectionItem[] = [
