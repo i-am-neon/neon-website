@@ -3,13 +3,15 @@ export default function FunContent(): JSX.Element {
     return (
         <div className="flex flex-col sm:mx-16 gap-5">
             <p>
-                Some of my interests
-                <br />
+                <h3 className="text-lg text-primary font-bold mb-2">
+                    Some of my interests
+                </h3>
                 <ul className="list-disc">
-                    <li className="ml-8">long-term travel with just a backpack</li>
-                    <li className="ml-8">woodworking</li>
-                    <li className="ml-8">ballroom and latin dance</li>
-                    <li className="ml-8">rock climbing</li>
+                    <li>long-term travel with just a backpack</li>
+                    <i>20+ countries and counting!</i>
+                    <li>woodworking</li>
+                    <li>ballroom and latin dance</li>
+                    <li>rock climbing</li>
                 </ul>
             </p>
             <p>
