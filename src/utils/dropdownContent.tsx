@@ -1,4 +1,5 @@
-import GitHubLink from "../components/GitHubLink";
+import GitHubIconLink from "../components/gitHubButtons/GitHubIconLink";
+import GitHubPillLink from "../components/gitHubButtons/GitHubPillLink";
 import OpenSourceBadge from "../components/OpenSourceBadge";
 import { DropdownSectionItem } from "../types/DropdownSectionItem";
 
@@ -33,6 +34,18 @@ export const currentProjectsContent: DropdownSectionItem[] = [
 
 export const pastProjectsContent: DropdownSectionItem[] = [
     {
+        heading: 'Rave Cape',
+        content: (
+            <p>
+                <img src="raveCape/rave-cape.gif" alt="" />
+                <br />
+                I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
+                <br /><br />
+                Open source mobile app and hardware schematics coming soon.
+            </p>
+        )
+    } as DropdownSectionItem,
+    {
         heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
         content: (
             <p>
@@ -51,6 +64,12 @@ export const pastProjectsContent: DropdownSectionItem[] = [
                 language processing, this project provides a space for people to collaborate with
                 an AI to create a poem that is eternalized on the blockchain. Minters also received
                 a physical copy of their haiku on real handmade paper from Japan.
+                <br /><br />
+                <div className="flex gap-2">
+                    <GitHubPillLink title="Frontend" href="https://github.com/i-am-neon/ai-haiku-frontend" />
+                    <GitHubPillLink title="Image Generator" href="https://github.com/i-am-neon/ai-haiku-frontend" />
+                    <GitHubPillLink title="Smart Contract" href="https://github.com/i-am-neon/ai-haiku-contract" />
+                </div>
             </p>
         )
     } as DropdownSectionItem,
@@ -67,7 +86,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
                     Nouns
                 </a> derivative that changes colors every time you look at it. Built on Ethereum and Arweave.
                 <br /><br />
-                <GitHubLink
+                <GitHubIconLink
                     href="https://github.com/0xNeon-opensource/color-changing-noun-nft"
                 />
             </p>
@@ -80,7 +99,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
                 An NPM Package with over 1,000 downloads that makes it easy to upload
                 NFT images and metadata to Arweave.
                 <br /><br />
-                <GitHubLink
+                <GitHubIconLink
                     href="https://github.com/0xNeon-opensource/arweave-nft-uploader"
                 />
             </p>
@@ -103,7 +122,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
                         solconverter.com
                     </a>
                     <span className="mx-2"></span>
-                    <GitHubLink
+                    <GitHubIconLink
                         href="https://github.com/0xNeon-opensource/solconverter"
                     />
                 </span>
@@ -118,7 +137,7 @@ export const pastProjectsContent: DropdownSectionItem[] = [
                         arconverter.com
                     </a>
                     <span className="mx-2"></span>
-                    <GitHubLink
+                    <GitHubIconLink
                         href="https://github.com/0xNeon-opensource/arconverter"
                     />
                 </span>

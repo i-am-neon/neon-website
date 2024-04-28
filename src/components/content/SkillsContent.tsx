@@ -7,7 +7,7 @@ export default function SkillsContent() {
                 </h3>
                 <ul>
                     <li>Typescript</li>
-                    <li>React (Next.js, etc.)</li>
+                    <li>React (Next.js, Remix, etc.)</li>
                     <li>Node</li>
                 </ul>
             </div>
