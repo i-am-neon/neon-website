@@ -1,7 +1,7 @@
-import GitHubIconLink from "../components/gitHubButtons/GitHubIconLink";
-import GitHubPillLink from "../components/gitHubButtons/GitHubPillLink";
-import OpenSourceBadge from "../components/OpenSourceBadge";
-import { DropdownSectionItem } from "../types/DropdownSectionItem";
+import { DropdownSectionItem } from "../../../types/DropdownSectionItem"
+import OpenSourceBadge from "../../OpenSourceBadge"
+import GitHubIconLink from "../../gitHubButtons/GitHubIconLink"
+import GitHubPillLink from "../../gitHubButtons/GitHubPillLink"
 
 export const currentProjectsContent: DropdownSectionItem[] = [
     {
@@ -32,7 +32,7 @@ export const currentProjectsContent: DropdownSectionItem[] = [
     } as DropdownSectionItem,
 ]
 
-export const pastProjectsContent: DropdownSectionItem[] = [
+export const featuredSideProjectsContent: DropdownSectionItem[] = [
     {
         heading: 'Rave Cape',
         content: (
@@ -73,6 +73,9 @@ export const pastProjectsContent: DropdownSectionItem[] = [
             </p>
         )
     } as DropdownSectionItem,
+]
+
+export const web3ProjectsContent: DropdownSectionItem[] = [
     {
         heading: (<span className="flex items-center">Color Changing Noun NFT<OpenSourceBadge /></span>),
         content: (
@@ -146,6 +149,49 @@ export const pastProjectsContent: DropdownSectionItem[] = [
     } as DropdownSectionItem,
 ]
 
+export const woodWorkingProjectsContent: DropdownSectionItem[] = [
+    {
+        heading: 'Rave Cape',
+        content: (
+            <p>
+                <img src="raveCape/rave-cape.gif" alt="" />
+                <br />
+                I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
+                <br /><br />
+                Open source mobile app and hardware schematics coming soon.
+            </p>
+        )
+    } as DropdownSectionItem,
+    {
+        heading: (<span className="flex items-center">AI Haiku<OpenSourceBadge /></span>),
+        content: (
+            <p>
+                <i>Using the beta release of GPT-3 + Ethereum + Arweave</i>
+                <br /><br />
+                I&apos;ve made a few NFT collections, but <a
+                    href="https://www.aihaiku.art/"
+                    target='_blank'
+                    rel="noreferrer"
+                    className="text-primary underline"
+                >
+                    AI Haiku
+                </a> is definitely my favorite.
+                <br /><br />
+                With a combination of generative art and natural
+                language processing, this project provides a space for people to collaborate with
+                an AI to create a poem that is eternalized on the blockchain. Minters also received
+                a physical copy of their haiku on real handmade paper from Japan.
+                <br /><br />
+                <div className="flex gap-2">
+                    <GitHubPillLink title="Frontend" href="https://github.com/i-am-neon/ai-haiku-frontend" />
+                    <GitHubPillLink title="Image Generator" href="https://github.com/i-am-neon/ai-haiku-frontend" />
+                    <GitHubPillLink title="Smart Contract" href="https://github.com/i-am-neon/ai-haiku-contract" />
+                </div>
+            </p>
+        )
+    } as DropdownSectionItem,
+]
+
 export const learningCohorsContent: DropdownSectionItem[] = [
     {
         heading: (
@@ -166,62 +212,4 @@ export const learningCohorsContent: DropdownSectionItem[] = [
             </p>
         )
     } as DropdownSectionItem
-]
-
-export const daoMembershipContent: DropdownSectionItem[] = [
-    {
-        heading: (
-            <span>Akiya <i>(contributor)</i></span>
-        ),
-        content: (
-            <p>
-                <a
-                    href="https://www.akiyadao.xyz/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    Akiya
-                </a> (空き家) means empty home. We&apos;re purchasing a cluster of homes in rural Japan to build an ecovillage
-                for climate conscious builders, artists and solarpunks.
-                <br /><br />
-                I&apos;m helping Akiya create the smart contract for its NFTs.
-            </p>
-        )
-    } as DropdownSectionItem,
-    {
-        heading: (
-            <span>Chainforest <i>(member)</i></span>
-        ),
-        content: (
-            <p>
-                <a
-                    href="https://twitter.com/chainforest_dao"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    ChainforestDAO
-                </a> curates a diverse and cohesive ecosystem of exceptional individuals to
-                learn, explore and build web3 together.
-            </p>
-        )
-    } as DropdownSectionItem,
-    {
-        heading: (
-            <span>Blank <i>(former contributor)</i></span>
-        ),
-        content: (
-            <p>
-                <a
-                    href="https://blank.foundation/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    Blank
-                </a> is a web3 community united by 10,000 blank NFTs. Together we vote on how they evolve.
-            </p>
-        )
-    } as DropdownSectionItem,
 ]

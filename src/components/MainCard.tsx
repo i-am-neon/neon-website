@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 import Modal from "./Modal";
 import Socials from "./Socials";
 import FunContent from "./content/FunContent";
-import ProjectsContent from "./content/ProjectsContent";
+import ProjectsContent from "./content/projectsContent/ProjectsContent";
 import SkillsContent from "./content/SkillsContent";
 
 type MainCardProps = {
