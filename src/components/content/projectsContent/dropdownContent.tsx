@@ -4,35 +4,6 @@ import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
 import GitHubIconLink from "../../gitHubButtons/GitHubIconLink";
 import GitHubPillLink from "../../gitHubButtons/GitHubPillLink";
 
-export const currentProjectsContent: DropdownSectionItem[] = [
-    {
-        heading: 'Founding Engineer at Ethos Wallet',
-        content: (
-            <p>
-                <i>January &apos;22 - Present</i>
-                <br /><br />
-                <a
-                    href="https://www.ethoswallet.xyz/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    Ethos
-                </a>
-                {' '}is a top wallet on the
-                {' '}<a
-                    href="https://sui.io/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    Sui blockchain
-                </a> with over 100k users that is often praised for its user experience.
-            </p>
-        )
-    } as DropdownSectionItem,
-]
-
 export const aiProjectsContent: DropdownSectionItem[] = [
     {
         heading: 'Cerebellum',
@@ -66,7 +37,7 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                 <br /><br />
                 <img className="rounded-md" src="projectScreenshots/dev-shop.png" alt="Dev Shop screenshot" />
                 <br />
-                Dev Shop is a "chat with your codebase" experiment in using advanced <a
+                Dev Shop is a "chat with your codebase" experiment in using <a
                     href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
                     target='_blank'
                     rel="noreferrer"
@@ -104,6 +75,8 @@ export const aiProjectsContent: DropdownSectionItem[] = [
             <p>
                 <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
                 <br /><br />
+                <img className="rounded-md mx-auto" src="projectScreenshots/ai-haiku.gif" alt="AI Haiku" />
+                <br />
                 <img className="rounded-md" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
                 <br />
                 I&apos;ve made a few NFT collections, but <a
@@ -117,8 +90,18 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                 <br /><br />
                 With a combination of generative art and natural
                 language processing, this project provides a space for people to collaborate with
-                an AI to create a poem that is eternalized on the blockchain. Minters also received
-                a physical copy of their haiku on real handmade paper from Japan.
+                an AI to create a poem that is eternalized on the blockchain.
+                <br /><br />
+                Minters also received a physical copy of their haiku on real handmade paper from Japan.
+                <br /><br />
+                View all haikus on <a
+                    href="https://opensea.io/collection/ai-haiku"
+                    target='_blank'
+                    rel="noreferrer"
+                    className="text-primary underline"
+                >
+                    OpenSea
+                </a>.
                 <br /><br />
                 <div className="flex gap-2">
                     <GitHubPillLink title="Frontend" href="https://github.com/i-am-neon/ai-haiku-frontend" />

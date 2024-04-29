@@ -14,7 +14,7 @@ export default function FunContent(): JSX.Element {
                     <li>rock climbing</li>
                 </ul>
             </p>
-            <p>
+            {/* <p>
                 Peruse my <a
                     href='https://oncyber.io/neon'
                     target='_blank'
@@ -23,7 +23,7 @@ export default function FunContent(): JSX.Element {
                 >
                     NFT Gallery
                 </a>
-            </p>
+            </p> */}
         </div>
     )
 }

@@ -5,7 +5,8 @@ import PointerAnimation from "./PointerAnimation";
 import Socials from "./Socials";
 import FunContent from "./content/FunContent";
 import SkillsContent from "./content/SkillsContent";
-import ProjectsContent from "./content/projectsContent/ProjectsContent";
+import SideProjectsContent from "./content/projectsContent/SideProjectsContent";
+import WorkExperienceContent from "./content/WorkExperienceContent";
 
 type MainCardProps = {
     clickOutsideRef: MutableRefObject<any>,
@@ -45,9 +46,15 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
                     </button>
                     <button
                         className="text-xl underline decoration-primary"
-                        onClick={() => openModal(<ProjectsContent />)}
+                        onClick={() => openModal(<WorkExperienceContent />)}
                     >
-                        projects
+                        work experience
+                    </button>
+                    <button
+                        className="text-xl underline decoration-primary"
+                        onClick={() => openModal(<SideProjectsContent />)}
+                    >
+                        side projects
                     </button>
                     <button
                         className="text-xl underline decoration-primary"

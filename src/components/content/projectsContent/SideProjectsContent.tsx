@@ -1,13 +1,9 @@
 import DropdownSection from "../../DropdownSection";
-import { aiProjectsContent, currentProjectsContent, learningCohorsContent, physicalProjectsContent, web3ProjectsContent } from "./dropdownContent";
+import { aiProjectsContent, learningCohorsContent as learningCohortsContent, physicalProjectsContent, web3ProjectsContent } from "./dropdownContent";
 
-export default function ProjectsContent(): JSX.Element {
+export default function SideProjectsContent(): JSX.Element {
     return (
         <>
-            <DropdownSection
-                title={<span>Currently working as</span>}
-                content={currentProjectsContent}
-            />
             <DropdownSection
                 title={<span>AI</span>}
                 content={aiProjectsContent}
@@ -22,7 +18,7 @@ export default function ProjectsContent(): JSX.Element {
             />
             <DropdownSection
                 title={<span>Learning cohorts</span>}
-                content={learningCohorsContent}
+                content={learningCohortsContent}
             />
         </>
     )
