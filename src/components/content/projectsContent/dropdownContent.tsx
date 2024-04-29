@@ -37,7 +37,7 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                 <br /><br />
                 <img className="rounded-md" src="projectScreenshots/dev-shop.png" alt="Dev Shop screenshot" />
                 <br />
-                Dev Shop is a "chat with your codebase" experiment in using <a
+                Dev Shop is a "chat with your codebase" experiment using <a
                     href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
                     target='_blank'
                     rel="noreferrer"
