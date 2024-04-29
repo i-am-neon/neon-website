@@ -74,7 +74,7 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                 >
                     RAG
                 </a> techniques to learn more about RAG pipelines and how they can be used on complex and large codebases:
-                <ul className="list-disc flex flex-col gap-2">
+                <ul className="list-disc flex flex-col gap-2 pt-3">
                     <li><strong><a
                         href="https://www.pinecone.io/"
                         target='_blank'
