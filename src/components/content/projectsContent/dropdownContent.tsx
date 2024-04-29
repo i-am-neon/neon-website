@@ -1,9 +1,8 @@
-import { DropdownSectionItem } from "../../../types/DropdownSectionItem"
-import OpenSourceBadge from "../../OpenSourceBadge"
-import GitHubIconLink from "../../gitHubButtons/GitHubIconLink"
-import GitHubPillLink from "../../gitHubButtons/GitHubPillLink"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
+import GitHubIconLink from "../../gitHubButtons/GitHubIconLink";
+import GitHubPillLink from "../../gitHubButtons/GitHubPillLink";
 
 export const currentProjectsContent: DropdownSectionItem[] = [
     {
@@ -34,18 +33,67 @@ export const currentProjectsContent: DropdownSectionItem[] = [
     } as DropdownSectionItem,
 ]
 
-export const featuredSideProjectsContent: DropdownSectionItem[] = [
+export const aiProjectsContent: DropdownSectionItem[] = [
     {
-        heading: 'Rave Cape',
+        heading: 'Cerebellum',
+        isOpenSource: true,
         content: (
             <p>
-                <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
+                <i>March '24 <a
+                    href="https://www.linkedin.com/posts/southparkcommons_airtable-everyones-app-platform-activity-7163976818969042944-311q/"
+                    target='_blank'
+                    rel="noreferrer"
+                    className="text-primary underline"
+                >
+                    OpenAI x South Park Commons Hackathon
+                </a></i>
+                <br /><br />
+                Loom demo:
+                <a href="https://www.loom.com/share/27ae4e8c5a1e445981f73aef5281d622?sid=2d4c5534-7396-4af2-83c5-4700cfd87d0c" target='_blank' rel="noreferrer"><img className="rounded-md" src="projectScreenshots/cerebellum-loom.png" alt="Cerebellum Loom Video Screenshot" /></a>
                 <br />
-                <i>May '24</i>
+                Cerebellum gives you insights from your handwritten and audio journal notes. It is built with OpenAI's GPT-4, DALL-E, Whisper, and Next.js.
                 <br /><br />
-                I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
+                <GitHubIconLink href='https://github.com/EthosWallet/spc-hackathon' />
+            </p>
+        )
+    } as DropdownSectionItem,
+    {
+        heading: 'Dev Shop',
+        isOpenSource: true,
+        content: (
+            <p>
+                <i>July '23</i>
                 <br /><br />
-                Open source mobile app and hardware schematics coming soon.
+                <img className="rounded-md" src="projectScreenshots/dev-shop.png" alt="Dev Shop screenshot" />
+                <br />
+                Dev Shop is a "chat with your codebase" experiment in using advanced <a
+                    href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
+                    target='_blank'
+                    rel="noreferrer"
+                    className="text-primary underline"
+                >
+                    RAG
+                </a> techniques to learn more about RAG pipelines and how they can be used on complex and large codebases:
+                <ul className="list-disc flex flex-col gap-2">
+                    <li><strong><a
+                        href="https://www.pinecone.io/"
+                        target='_blank'
+                        rel="noreferrer"
+                        className="text-primary underline"
+                    >
+                        Pinecone
+                    </a></strong>: vector database</li>
+                    <li><strong><a
+                        href="https://www.langchain.com/"
+                        target='_blank'
+                        rel="noreferrer"
+                        className="text-primary underline"
+                    >
+                        Langchain
+                    </a></strong>: indexing and AI interactions</li>
+                </ul>
+                <br /><br />
+                <GitHubIconLink href='https://github.com/i-am-neon/code-chat' />
             </p>
         )
     } as DropdownSectionItem,
@@ -54,10 +102,10 @@ export const featuredSideProjectsContent: DropdownSectionItem[] = [
         isOpenSource: true,
         content: (
             <p>
-                <img className="rounded-md" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
-                <br />
                 <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
                 <br /><br />
+                <img className="rounded-md" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
+                <br />
                 I&apos;ve made a few NFT collections, but <a
                     href="https://www.aihaiku.art/"
                     target='_blank'
@@ -172,6 +220,20 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
 ]
 
 export const physicalProjectsContent: DropdownSectionItem[] = [
+    {
+        heading: 'Rave Cape',
+        content: (
+            <p>
+                <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
+                <br />
+                <i>May '24</i>
+                <br /><br />
+                I hand-crafted a unique LED cape controlled by an ESP32 with a custom React Native app.
+                <br /><br />
+                Open source mobile app and hardware schematics coming soon.
+            </p>
+        )
+    } as DropdownSectionItem,
     {
         heading: 'Wood Working',
         content: (

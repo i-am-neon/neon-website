@@ -1,11 +1,11 @@
-import { MutableRefObject, useState, useEffect } from "react";
+import { MutableRefObject, useState } from "react";
 import Avatar from "./Avatar";
 import Modal from "./Modal";
+import PointerAnimation from "./PointerAnimation";
 import Socials from "./Socials";
 import FunContent from "./content/FunContent";
-import ProjectsContent from "./content/projectsContent/ProjectsContent";
 import SkillsContent from "./content/SkillsContent";
-import PointerAnimation from "./PointerAnimation";
+import ProjectsContent from "./content/projectsContent/ProjectsContent";
 
 type MainCardProps = {
     clickOutsideRef: MutableRefObject<any>,
