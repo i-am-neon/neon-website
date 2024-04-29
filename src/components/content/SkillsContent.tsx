@@ -18,9 +18,9 @@ export default function SkillsContent() {
                     For Fun
                 </h3>
                 <ul className="list-disc pl-4">
-                    <li>Solidity</li>
                     <li>Stable Diffusion</li>
                     <li>LLMs</li>
+                    <li>Solidity</li>
                 </ul>
             </div>
         </div>
