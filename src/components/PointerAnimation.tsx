@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function PointerAnimation(): JSX.Element {
-  const [showAnimation, setShowAnimation] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const [showFirstRing, setShowFirstRing] = useState(false);
   const [showSecondRing, setShowSecondRing] = useState(false);
@@ -36,10 +36,10 @@ export default function PointerAnimation(): JSX.Element {
         <img src="gestures/finger.png" alt="" className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${animationClass} -rotate-[30deg]`} style={{ width: '50px', animationFillMode: 'forwards' }} />
       )}
       {showFirstRing && (
-        <div className="ring-animation ring-first absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-[52px]"></div>
+        <div className="ring-animation ring-first absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-[66px] -ml-[50px]"></div>
       )}
       {showSecondRing && (
-        <div className="ring-animation ring-second absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-[52px]"></div>
+        <div className="ring-animation ring-second absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-[66px] -ml-[50px]"></div>
       )}
     </div>
   );
