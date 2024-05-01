@@ -5,7 +5,7 @@ export default function Head() {
     const { currentHexColor } = useColor()
     const title = 'NΞ◎N';
     const description = 'Who is NΞ◎N?';
-    const ogImageUrl = 'https://arweave.net/nLoRhYwTPXb41X3WfZm1_uYSxqAk8wF5Rb7d4xfSnRM';
+    const ogImageUrl = `${window.location.origin}/og-image.png`;
     return (
         <Helmet>
             <title>{title}</title>
