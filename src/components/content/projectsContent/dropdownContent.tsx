@@ -1,8 +1,9 @@
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
 import GitHubIconLink from "../../gitHubButtons/GitHubIconLink";
 import GitHubPillLink from "../../gitHubButtons/GitHubPillLink";
+import { AspectRatio } from '../../shadcn/ui/aspect-ratio';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../shadcn/ui/carousel';
 
 export const aiProjectsContent: DropdownSectionItem[] = [
     {
@@ -154,17 +155,20 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         heading: 'Sol and Arweave atomic unit converters',
         isOpenSource: true,
         content: (
-            <p>
-                <Carousel>
-                    <div>
-                        <img src="projectScreenshots/sol-converter.png" alt="SOL Converter" />
-                        <p className="legend">SOL Converter</p>
-                    </div>
-                    <div>
-                        <img src="projectScreenshots/ar-converter.png" alt="AR Converter" />
-                        <p className="legend">AR Converter</p>
-                    </div>
+            <p className="w-full">
+                <Carousel className="mx-12">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <img src="projectScreenshots/sol-converter.png" alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src="projectScreenshots/ar-converter.png" alt="" />
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious variant='secondary' />
+                    <CarouselNext variant='secondary' />
                 </Carousel>
+                <br /><br />
                 Two online calculators to convert Solana and Arweave to their atomic units;
                 Lamport and Winston. Both are hosted permanently on Arweave.
                 <br /><br />
@@ -220,24 +224,48 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
     {
         heading: 'Wood Working',
         content: (
-            <p>
-                <Carousel>
-                    <div>
-                        <img src="woodworking/sun.jpg" alt="" />
-                        <p className="legend">Sun</p>
-                    </div>
-                    <div>
-                        <img src="woodworking/moon.jpg" alt="" />
-                        <p className="legend">Moon</p>
-                    </div>
-                    <div>
-                        <img src="woodworking/divide.jpg" alt="" />
-                        <p className="legend">Divide</p>
-                    </div>
-                    <div>
-                        <img src="woodworking/peace.jpg" alt="" />
-                        <p className="legend">Peace</p>
-                    </div>
+            <p className='w-full'>
+                <Carousel className="mx-12">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="woodworking/sun.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="woodworking/moon.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="woodworking/divide.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="woodworking/peace.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious variant='secondary' />
+                    <CarouselNext variant='secondary' />
                 </Carousel>
             </p>
         )
@@ -245,17 +273,26 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
     {
         heading: 'Hologram Pyramid',
         content: (
-            <p>
+            <p className='w-full'>
                 <i>Dec '17</i>
                 <br /><br />
-                <Carousel>
-                    <img src="hologramPyramid/fireworks.gif" alt="" />
-                    <img src="hologramPyramid/jellyfish.gif" alt="" />
-                    <img src="hologramPyramid/aura.gif" alt="" />
-                    <div>
-                        <img src="hologramPyramid/prototype.gif" alt="" />
-                        <p className="legend">Prototype</p>
-                    </div>
+                <Carousel className="mx-12">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <img src="hologramPyramid/fireworks.gif" alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src="hologramPyramid/jellyfish.gif" alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src="hologramPyramid/aura.gif" alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img src="hologramPyramid/prototype.gif" alt="" />
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious variant='secondary' />
+                    <CarouselNext variant='secondary' />
                 </Carousel>
             </p>
         )
@@ -264,15 +301,37 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
         heading: 'Cryptocurrency Mining Rigs',
         isOpenSource: true,
         content: (
-            <p>
+            <p className='w-full'>
                 <i>April - Dec '21</i>
                 <br /><br />
                 I learned a ton about Linux and hardware from these projects!
                 <br /><br />
-                <Carousel>
-                    <img src="miningRigs/dense.jpg" alt="" />
-                    <img src="miningRigs/rig-dog.jpg" alt="" />
+                <Carousel className="mx-12">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="miningRigs/dense.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <AspectRatio ratio={1} className="flex items-center bg-transparent">
+                                <img
+                                    src="miningRigs/rig-dog.jpg"
+                                    alt=""
+                                    className="object-cover"
+                                />
+                            </AspectRatio>
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious variant='secondary' />
+                    <CarouselNext variant='secondary' />
                 </Carousel>
+
+                <br /><br />
                 I Constructed five linux machines each with different specialized hardware for various cryptocurrency mining:
                 <br /><br />
                 <ul className="list-disc flex flex-col gap-2">
