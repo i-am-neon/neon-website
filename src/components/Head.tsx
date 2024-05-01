@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { useColor } from "../providers/ColorProvider";
 
 export default function Head() {
@@ -7,10 +6,9 @@ export default function Head() {
     const description = 'Who is NΞ◎N?';
     const ogImageUrl = `${window.location.origin}/og-image.png`;
     return (
-        <Helmet>
+        <head>
             <title>{title}</title>
             <meta name="description" content={description} />
-
             <meta property="og:url" content="https://neon.lol"></meta>
             <meta property="og:type" content="website"></meta>
             <meta property="og:title" content={title}></meta>
@@ -27,6 +25,6 @@ export default function Head() {
             <meta name="theme-color" content={currentHexColor}></meta>
 
             <link rel="icon" href="/favicon.ico" />
-        </Helmet>
+        </head>
     )
 }
