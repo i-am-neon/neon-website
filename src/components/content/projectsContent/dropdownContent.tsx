@@ -1,4 +1,3 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
 import GitHubIconLink from "../../gitHubButtons/GitHubIconLink";
 import GitHubPillLink from "../../gitHubButtons/GitHubPillLink";
@@ -76,10 +75,19 @@ export const aiProjectsContent: DropdownSectionItem[] = [
             <p>
                 <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
                 <br /><br />
-                <img className="rounded-md mx-auto" src="projectScreenshots/ai-haiku.gif" alt="AI Haiku" />
-                <br />
-                <img className="rounded-md" src="projectScreenshots/ai-haiku.png" alt="AI Haiku" />
-                <br />
+                <Carousel className="mx-12">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <img src="projectScreenshots/ai-haiku.gif" alt="" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <div className="flex items-center h-full"><img src="projectScreenshots/ai-haiku.png" alt="" /></div>
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious variant='secondary' />
+                    <CarouselNext variant='secondary' />
+                </Carousel>
+                <br /><br />
                 I&apos;ve made a few NFT collections, but <a
                     href="https://www.aihaiku.art/"
                     target='_blank'
