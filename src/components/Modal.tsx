@@ -39,7 +39,7 @@ export default function Modal(props: ModalProps) {
                         leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                         leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
-                        <div className="text-white font-mono selection:text-gray-800 selection:bg-primary relative inline-block align-bottom bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-3xl px-10 py-6 my-3">
+                        <div className="text-white font-mono selection:text-gray-800 selection:bg-primary relative inline-block align-bottom bg-slate-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-3xl px-4 sm:px-10 py-6 my-3">
                             <div className="block absolute top-0 right-0 pt-4 pr-4">
                                 <button
                                     type="button"

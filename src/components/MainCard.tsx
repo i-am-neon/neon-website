@@ -7,6 +7,7 @@ import FunContent from "./content/FunContent";
 import SkillsContent from "./content/SkillsContent";
 import SideProjectsContent from "./content/projectsContent/SideProjectsContent";
 import WorkExperienceContent from "./content/WorkExperienceContent";
+import { Separator } from "./shadcn/ui/separator";
 
 type MainCardProps = {
     clickOutsideRef: MutableRefObject<any>,
@@ -28,7 +29,7 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
                 <div className="sm:w-1/2 flex flex-col items-center relative">
                     <Avatar />
                     <PointerAnimation />
-                    <h1 className='font-dunerise text-primary mt-2 text-4xl'>
+                    <h1 className='font-dunerise text-primary mt-4 text-4xl'>
                         neon
                     </h1>
                     <p className='my-2'>Artist & Engineer</p>
@@ -37,7 +38,9 @@ export default function MainCard({ clickOutsideRef, ignoreRef }: MainCardProps):
                     </div>
                 </div>
 
-                <div className="sm:w-1/2 flex flex-col items-center gap-3 pt-2 sm:pt-0">
+                <Separator className="sm:hidden my-4 bg-white/20" />
+
+                <div className="sm:w-1/2 flex flex-col items-center gap-5 pt-2 sm:pt-0">
                     <button
                         className="text-xl underline decoration-primary"
                         onClick={() => openModal(<SkillsContent />)}
