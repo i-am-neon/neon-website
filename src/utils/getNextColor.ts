@@ -10,6 +10,11 @@ export const getNextColorIndex = (currentColorIndex: number): number => {
 
 export const updateDocumentColor = (colorHex: string): void => {
     document.documentElement.style.setProperty('--link-color', colorHex);
+
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', colorHex);
+    }
 };
 
 export const getColorNameFromIndex = (index: number): ColorName => {

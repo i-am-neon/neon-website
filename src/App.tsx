@@ -1,9 +1,8 @@
+import { Analytics } from "@vercel/analytics/react";
 import { MutableRefObject, useEffect, useRef } from "react";
-import Head from './components/Head';
 import MainCard from "./components/MainCard";
 import { useColor } from "./providers/ColorProvider";
 import PsychedelicBackgroundWrapper from "./providers/PsychadelicBackgroundProvider";
-import { Analytics } from "@vercel/analytics/react"
 
 function useClickOutside(
   clickOutsideRef: MutableRefObject<any>,
@@ -36,7 +35,6 @@ function App() {
   return (
     <>
       <Analytics />
-      <Head />
       <PsychedelicBackgroundWrapper>
         <div className='selection:bg-primary flex flex-col w-full min-h-screen overflow-hidden text-white font-mono selection:text-gray-800'>
           <MainCard
