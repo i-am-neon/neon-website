@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 import store from 'store2';
-import { COLOR_NAMES, HEX_COLORS, updateDocumentColor } from "../utils/getNextColor"; // Ensure the import paths are correct
+import { COLOR_NAMES, HEX_COLORS, updateDocumentColor, updateFavicon } from "../utils/getNextColor"; // Ensure the import paths are correct
 import { ColorName } from '../enums/ColorName';
 import { HexColor } from '../enums/HexColor';
 
@@ -37,6 +37,7 @@ export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
         setCurrentHexColor(HEX_COLORS[colorIndex]);
         setCurrentColorName(COLOR_NAMES[colorIndex]);
         updateDocumentColor(HEX_COLORS[colorIndex]);
+        updateFavicon(colorIndex);
     }, []);
 
     const setNextColor = (): void => {
@@ -47,6 +48,7 @@ export const ColorProvider: React.FC<ColorProviderProps> = ({ children }) => {
         setCurrentColorName(COLOR_NAMES[newColorIndex]);
         themeStore.set('primaryIndex', newColorIndex);
         updateDocumentColor(HEX_COLORS[newColorIndex]);
+        updateFavicon(newColorIndex);
     };
 
     return (

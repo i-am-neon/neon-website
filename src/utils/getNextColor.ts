@@ -21,3 +21,19 @@ export const getColorNameFromIndex = (index: number): ColorName => {
     const colorValues = Object.values(ColorName);
     return colorValues[index] ?? colorValues[0];
 };
+
+export const updateFavicon = (colorIndex: number): void => {
+    const colorName = getColorNameFromIndex(colorIndex);
+    const faviconUrl = `favicons/${colorName}.ico`;
+
+    const link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+    if (link) {
+        link.href = faviconUrl;
+    } else {
+        // Create a new link element if it does not exist
+        const newLink: HTMLLinkElement = document.createElement('link');
+        newLink.rel = 'icon';
+        newLink.href = faviconUrl;
+        document.getElementsByTagName('head')[0].appendChild(newLink);
+    }
+};

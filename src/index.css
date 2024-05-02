@@ -7,7 +7,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* replaced by link color */
+    /* --background: 224 71% 4%; */
     --foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -40,7 +41,8 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    /* replaced by link color */
+    /* --background: 224 71% 4%; */
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
