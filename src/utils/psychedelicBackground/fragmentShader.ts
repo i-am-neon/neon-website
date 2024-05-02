@@ -5,6 +5,7 @@ const fragmentShader: string = `
     uniform vec2 uMousePosition;
     uniform float uHue;
     uniform float uHueVariation;
+    uniform float uSaturation;
     uniform float uDensity;
     uniform float uDisplacement;
     uniform float uGradient;
@@ -140,7 +141,7 @@ const fragmentShader: string = `
     //elevation += uGradient * .25;
 
     float hue =  uHue + shadow * .1 + cnoise( vec2( elevation * .10, .1 + t)) * uHueVariation;
-    float saturation = .6;;
+    float saturation = uSaturation;
     float brightness =  - (1.0 - shadow) * .1 + .5  - smoothstep( 0.0, .9,  cnoise( vec2( elevation * .5, .4 + t * 5.0)) ) * .1;
 
 

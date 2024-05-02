@@ -4,12 +4,14 @@ import vertexShader from '../utils/psychedelicBackground/vertexShader';
 import fragmentShader from '../utils/psychedelicBackground/fragmentShader';
 import { useColor } from '../providers/ColorProvider';
 
-const colorIndexToHueValue = [0.3, 0.45, 0, 0.65, 0.85];
+const colorIndexToHueValue = [0.3, 0.45, 0, 0.65, 0];
+const colorIndexToSaturation = [0.7, 0.7, 0.7, 0.7, 0.0]; // Low saturation for white, higher for others
 
 const PsychedelicBackground: React.FC = () => {
     const mountRef = useRef<HTMLDivElement>(null);
     const { currentColorIndex } = useColor();
     const [currentHue, setCurrentHue] = useState(colorIndexToHueValue[currentColorIndex] ?? 0.5);
+    const [currentSaturation, setCurrentSaturation] = useState(colorIndexToSaturation[currentColorIndex] ?? 0.7);
 
     useEffect(() => {
         const mount = mountRef.current; // Ensure mount is directly used from ref
@@ -32,6 +34,7 @@ const PsychedelicBackground: React.FC = () => {
             uHueVariation: { value: 0.2 },
             uDensity: { value: 0.5 },
             uDisplacement: { value: 1.0 },
+            uSaturation: { value: currentSaturation },
         };
 
         const shaderMaterial = new THREE.ShaderMaterial({
@@ -48,11 +51,17 @@ const PsychedelicBackground: React.FC = () => {
 
         const animate = () => {
             uniforms.uTime.value += 0.05; // Speed at which it flows ambiently
-            const targetHue = colorIndexToHueValue[currentColorIndex] ?? 0.5;
             const transitionSeconds = 0.05;
-            uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds;
 
+            // Hue
+            const targetHue = colorIndexToHueValue[currentColorIndex] ?? 0.5;
+            uniforms.uHue.value += (targetHue - uniforms.uHue.value) * transitionSeconds;
             setCurrentHue(uniforms.uHue.value);
+
+            // Saturation
+            const targetSaturation = colorIndexToSaturation[currentColorIndex] ?? 0.7;
+            uniforms.uSaturation.value += (targetSaturation - uniforms.uSaturation.value) * transitionSeconds;
+            setCurrentSaturation(uniforms.uSaturation.value);
 
             renderer.render(scene, camera);
             frameId = requestAnimationFrame(animate);
