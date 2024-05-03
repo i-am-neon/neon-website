@@ -11,6 +11,15 @@ export default function WorkExperienceContent(): JSX.Element {
                         <p>
                             <i>January &apos;24 - Present</i>
                             <br /><br />
+                            <i>Incubated at <a
+                                href="https://www.southparkcommons.com/"
+                                target='_blank'
+                                rel="noreferrer"
+                                className="text-primary underline"
+                            >
+                                South Park Commons
+                            </a></i>
+                            <br /><br />
                             We are experimenting with building a software simulator for complex projects.
                             <br /><br />
                             LLM data pipelines, RAG, static analysis, and more.
@@ -26,6 +35,15 @@ export default function WorkExperienceContent(): JSX.Element {
                         content: (
                             <p>
                                 <i>Jan &apos;22 - Jan &apos;24</i>
+                                <br /><br />
+                                <i>Incubated at <a
+                                    href="https://www.southparkcommons.com/"
+                                    target='_blank'
+                                    rel="noreferrer"
+                                    className="text-primary underline"
+                                >
+                                    South Park Commons
+                                </a></i>
                                 <br /><br />
                                 <a
                                     href="https://www.ethoswallet.xyz/"
