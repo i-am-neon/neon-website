@@ -164,6 +164,8 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         isOpenSource: true,
         content: (
             <p className="w-full">
+                <i>The #1 converter tool in the Solana and Arweave ecosystems!</i>
+                <br /><br />
                 <Carousel className="mx-12">
                     <CarouselContent>
                         <CarouselItem>
@@ -178,7 +180,7 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
                 </Carousel>
                 <br /><br />
                 Two online calculators to convert Solana and Arweave to their atomic units;
-                Lamport and Winston. Both are hosted permanently on Arweave.
+                Lamport and Winston.
                 <br /><br />
                 <span className="flex">
                     <a
