@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react";
+
 export default function SkillsContent() {
     return (
         <div className="flex flex-col gap-8 mt-4">
@@ -27,14 +29,10 @@ export default function SkillsContent() {
                             AI
                         </h3>
                         <ul className="list-disc pl-4">
-                            <li><a
-                                href="https://www.modular.com/max/mojo"
-                                target='_blank'
-                                rel="noreferrer"
-                                className="text-primary underline"
-                            >
+                            <li><ExternalLink to="https://www.modular.com/max/mojo">
                                 Mojo
-                            </a></li>
+                            </ExternalLink>
+                            </li>
                             <li>Python</li>
                             <li>RAG (Retrieval-Augmented Generation)</li>
                             <li>Agentic Reasoning</li>

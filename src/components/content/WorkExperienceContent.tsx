@@ -1,4 +1,5 @@
 import DropdownSection from "../DropdownSection";
+import ExternalLink from "../ExternalLink";
 
 export default function WorkExperienceContent(): JSX.Element {
     return (
@@ -11,23 +12,14 @@ export default function WorkExperienceContent(): JSX.Element {
                         <p>
                             <i>January &apos;24 - Present</i>
                             <br /><br />
-                            <i>Incubated at <a
-                                href="https://www.southparkcommons.com/"
-                                target='_blank'
-                                rel="noreferrer"
-                                className="text-primary underline"
-                            >
+                            <i>Incubated at <ExternalLink to="https://www.southparkcommons.com/">
                                 South Park Commons
-                            </a></i>
+                            </ExternalLink>
+                            </i>
                             <br /><br />
-                            At <a
-                                href="https://codeyam.com/"
-                                target='_blank'
-                                rel="noreferrer"
-                                className="text-primary underline"
-                            >
+                            At <ExternalLink to="https://codeyam.com/">
                                 CodeYam
-                            </a> we are experimenting with building a software simulator for complex code repositories.
+                            </ExternalLink> we are experimenting with building a software simulator for complex code repositories.
                             <br /><br />
                             Using LLM data pipelines, RAG, static analysis, and more.
                         </p>
@@ -43,32 +35,20 @@ export default function WorkExperienceContent(): JSX.Element {
                             <p>
                                 <i>Jan &apos;22 - Jan &apos;24</i>
                                 <br /><br />
-                                <i>Incubated at <a
-                                    href="https://www.southparkcommons.com/"
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    className="text-primary underline"
-                                >
+                                <i>Incubated at <ExternalLink to="https://www.southparkcommons.com/">
                                     South Park Commons
-                                </a></i>
+                                </ExternalLink>
+                                </i>
                                 <br /><br />
-                                <a
-                                    href="https://www.ethoswallet.xyz/"
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    className="text-primary underline"
-                                >
+                                <ExternalLink to="https://www.ethoswallet.xyz/">
                                     Ethos
-                                </a>
+                                </ExternalLink>
+
                                 {' '}is a top wallet on the
-                                {' '}<a
-                                    href="https://sui.io/"
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    className="text-primary underline"
-                                >
+                                {' '}<ExternalLink to="https://sui.io/">
                                     Sui blockchain
-                                </a> with over 100k users that is often praised for its user experience.
+                                </ExternalLink>
+                                with over 100k users that is often praised for its user experience.
                             </p>
                         )
                     },
@@ -80,21 +60,13 @@ export default function WorkExperienceContent(): JSX.Element {
                                 <br /><br />
                                 <i>Part-time, in parallel with below role</i>
                                 <br /><br />
-                                Assisted <a
-                                    href="https://www.diamandis.com/"
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    className="text-primary underline"
-                                >
+                                Assisted <ExternalLink to="https://www.diamandis.com/">
                                     Peter Diamandis
-                                </a> by conducting research and analysis to guide the selection of emerging technologies featured at two annual <a
-                                    href="https://www.abundance360.com/summit"
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    className="text-primary underline"
-                                >
+                                </ExternalLink>{' '}
+                                by conducting research and analysis to guide the selection of emerging technologies featured at two annual
+                                {' '}<ExternalLink to="https://www.abundance360.com/summit">
                                     Abundance 360 Conference
-                                </a>
+                                </ExternalLink>
                             </p>
                         )
                     },

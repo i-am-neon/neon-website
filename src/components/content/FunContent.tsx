@@ -14,16 +14,6 @@ export default function FunContent(): JSX.Element {
                     <li>rock climbing</li>
                 </ul>
             </p>
-            {/* <p>
-                Peruse my <a
-                    href='https://oncyber.io/neon'
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
-                    NFT Gallery
-                </a>
-            </p> */}
         </div>
     )
 }

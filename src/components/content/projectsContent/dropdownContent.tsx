@@ -1,4 +1,5 @@
 import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
+import ExternalLink from "../../ExternalLink";
 import GitHubIconLink from "../../gitHubButtons/GitHubIconLink";
 import GitHubPillLink from "../../gitHubButtons/GitHubPillLink";
 import { AspectRatio } from '../../shadcn/ui/aspect-ratio';
@@ -10,17 +11,17 @@ export const aiProjectsContent: DropdownSectionItem[] = [
         isOpenSource: true,
         content: (
             <p>
-                <i>March '24 <a
-                    href="https://www.linkedin.com/posts/southparkcommons_airtable-everyones-app-platform-activity-7163976818969042944-311q/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                <i>March '24 <ExternalLink to="https://www.linkedin.com/posts/southparkcommons_airtable-everyones-app-platform-activity-7163976818969042944-311q/">
                     OpenAI x South Park Commons Hackathon
-                </a></i>
+                </ExternalLink>
+                </i>
                 <br /><br />
                 Loom demo:
-                <a href="https://www.loom.com/share/27ae4e8c5a1e445981f73aef5281d622?sid=2d4c5534-7396-4af2-83c5-4700cfd87d0c" target='_blank' rel="noreferrer"><img className="rounded-md" src="projectScreenshots/cerebellum-loom.png" alt="Cerebellum Loom Video Screenshot" /></a>
+                <a
+                    href="https://www.loom.com/share/27ae4e8c5a1e445981f73aef5281d622?sid=2d4c5534-7396-4af2-83c5-4700cfd87d0c"
+                    target='_blank' rel="noreferrer">
+                    <img className="rounded-md" src="projectScreenshots/cerebellum-loom.png" alt="Cerebellum Loom Video Screenshot" />
+                </a>
                 <br />
                 Cerebellum gives you insights from your handwritten and audio journal notes. It is built with OpenAI's GPT-4, DALL-E, Whisper, and Next.js.
                 <br /><br />
@@ -37,31 +38,18 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                 <br /><br />
                 <img className="rounded-md" src="projectScreenshots/dev-shop.png" alt="Dev Shop screenshot" />
                 <br />
-                Dev Shop is a "chat with your codebase" experiment using <a
-                    href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                Dev Shop is a "chat with your codebase" experiment using <ExternalLink to="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">
                     RAG
-                </a> techniques to learn more about RAG pipelines and how they can be used on complex and large codebases:
+                </ExternalLink> techniques to learn more about RAG pipelines and how they can be used on complex and large codebases:
                 <ul className="list-disc flex flex-col gap-2 pt-3">
-                    <li><strong><a
-                        href="https://www.pinecone.io/"
-                        target='_blank'
-                        rel="noreferrer"
-                        className="text-primary underline"
-                    >
+                    <li><strong><ExternalLink to="https://www.pinecone.io/">
                         Pinecone
-                    </a></strong>: vector database</li>
-                    <li><strong><a
-                        href="https://www.langchain.com/"
-                        target='_blank'
-                        rel="noreferrer"
-                        className="text-primary underline"
-                    >
+                    </ExternalLink>
+                    </strong>: vector database</li>
+                    <li><strong><ExternalLink to="https://www.langchain.com/">
                         Langchain
-                    </a></strong>: indexing and AI interactions</li>
+                    </ExternalLink>
+                    </strong>: indexing and AI interactions</li>
                 </ul>
                 <br /><br />
                 <GitHubIconLink href='https://github.com/i-am-neon/dev-shop' />
@@ -88,29 +76,21 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                     <CarouselNext variant='secondary' />
                 </Carousel>
                 <br /><br />
-                I&apos;ve made a few NFT collections, but <a
-                    href="https://www.aihaiku.art/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                I&apos;ve made a few NFT collections, but <ExternalLink to="https://www.aihaiku.art/">
                     AI Haiku
-                </a> is definitely my favorite.
+                </ExternalLink> is definitely my favorite.
                 <br /><br />
                 With a combination of generative art and natural
                 language processing, this project provides a space for people to collaborate with
                 an AI to create a poem that is eternalized on the blockchain.
                 <br /><br />
-                Minters also received a physical copy of their haiku on real handmade paper from Japan.
+                Minters also received a physical copy of their haiku on real handmade paper from Japan. <ExternalLink to="https://www.aihaiku.art/paper">
+                    Learn about the physical haikus
+                </ExternalLink>
                 <br /><br />
-                View all haikus on <a
-                    href="https://opensea.io/collection/ai-haiku"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                View all haikus on <ExternalLink to="https://opensea.io/collection/ai-haiku">
                     OpenSea
-                </a>.
+                </ExternalLink>
                 <br /><br />
                 <div className="flex gap-2">
                     <GitHubPillLink title="Frontend" href="https://github.com/i-am-neon/ai-haiku-frontend" />
@@ -130,14 +110,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
             <p>
                 <img className="mx-auto" src="https://media.giphy.com/media/7SrmPnpz1mI2bvdmRy/giphy.gif" alt="color changing Noun" />
                 <br />
-                With a cleverly-written Solidity smart contract, I created a <a
-                    href="https://nouns.wtf/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                With a cleverly-written Solidity smart contract, I created a <ExternalLink to="https://nouns.wtf/">
                     Nouns
-                </a> derivative that changes colors every time you look at it. Built on Ethereum and Arweave.
+                </ExternalLink> derivative that changes colors every time you look at it. Built on Ethereum and Arweave.
                 <br /><br />
                 <GitHubIconLink
                     href="https://github.com/0xNeon-opensource/color-changing-noun-nft"
@@ -183,14 +158,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
                 Lamport and Winston.
                 <br /><br />
                 <span className="flex">
-                    <a
-                        href="https://www.solconverter.com/"
-                        target='_blank'
-                        rel="noreferrer"
-                        className="text-primary underline"
-                    >
+                    <ExternalLink to="https://www.solconverter.com/">
                         solconverter.com
-                    </a>
+                    </ExternalLink>
                     <span className="mx-2"></span>
                     <GitHubIconLink
                         href="https://github.com/0xNeon-opensource/solconverter"
@@ -198,14 +168,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
                 </span>
                 <br />
                 <span className="flex">
-                    <a
-                        href="https://www.arconverter.com/"
-                        target='_blank'
-                        rel="noreferrer"
-                        className="text-primary underline"
-                    >
+                    <ExternalLink to="https://www.arconverter.com/">
                         arconverter.com
-                    </a>
+                    </ExternalLink>
                     <span className="mx-2"></span>
                     <GitHubIconLink
                         href="https://github.com/0xNeon-opensource/arconverter"
@@ -219,6 +184,7 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
 export const physicalProjectsContent: DropdownSectionItem[] = [
     {
         heading: 'Rave Cape',
+        isOpenSource: true,
         content: (
             <p>
                 <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
@@ -368,14 +334,9 @@ export const learningCohorsContent: DropdownSectionItem[] = [
         ),
         content: (
             <p>
-                <a
-                    href="https://www.kernel.community/"
-                    target='_blank'
-                    rel="noreferrer"
-                    className="text-primary underline"
-                >
+                <ExternalLink to="https://www.kernel.community/">
                     Kernel
-                </a> is a peer-to-peer learning community dedicated to the journey towards a
+                </ExternalLink> is a peer-to-peer learning community dedicated to the journey towards a
                 better understanding of truth: in our work, in our relationships with others,
                 and in our inner worlds.
             </p>
