@@ -73,6 +73,32 @@ export default function WorkExperienceContent(): JSX.Element {
                         )
                     },
                     {
+                        heading: 'Technology Research Consultant for Peter Diamandis',
+                        content: (
+                            <p>
+                                <i>Nov &apos;19 - Jan &apos;21</i>
+                                <br /><br />
+                                <i>Part-time, in parallel with below role</i>
+                                <br /><br />
+                                Assisted <a
+                                    href="https://www.diamandis.com/"
+                                    target='_blank'
+                                    rel="noreferrer"
+                                    className="text-primary underline"
+                                >
+                                    Peter Diamandis
+                                </a> by conducting research and analysis to guide the selection of emerging technologies featured at two annual <a
+                                    href="https://www.abundance360.com/summit"
+                                    target='_blank'
+                                    rel="noreferrer"
+                                    className="text-primary underline"
+                                >
+                                    Abundance 360 Conference
+                                </a>
+                            </p>
+                        )
+                    },
+                    {
                         heading: 'Full Stack Engineer at Fortune 100 Financial Institution',
                         content: (
                             <p>
