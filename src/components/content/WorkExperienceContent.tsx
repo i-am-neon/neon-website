@@ -6,7 +6,7 @@ export default function WorkExperienceContent(): JSX.Element {
             <DropdownSection
                 title={<span>Current</span>}
                 content={[{
-                    heading: 'Founding Engineer at Stealth Startup',
+                    heading: 'Founding Engineer at CodeYam',
                     content: (
                         <p>
                             <i>January &apos;24 - Present</i>
@@ -20,9 +20,16 @@ export default function WorkExperienceContent(): JSX.Element {
                                 South Park Commons
                             </a></i>
                             <br /><br />
-                            We are experimenting with building a software simulator for complex projects.
+                            At <a
+                                href="https://codeyam.com/"
+                                target='_blank'
+                                rel="noreferrer"
+                                className="text-primary underline"
+                            >
+                                CodeYam
+                            </a> we are experimenting with building a software simulator for complex code repositories.
                             <br /><br />
-                            LLM data pipelines, RAG, static analysis, and more.
+                            Using LLM data pipelines, RAG, static analysis, and more.
                         </p>
                     )
                 }]}

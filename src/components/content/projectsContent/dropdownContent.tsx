@@ -64,7 +64,7 @@ export const aiProjectsContent: DropdownSectionItem[] = [
                     </a></strong>: indexing and AI interactions</li>
                 </ul>
                 <br /><br />
-                <GitHubIconLink href='https://github.com/i-am-neon/code-chat' />
+                <GitHubIconLink href='https://github.com/i-am-neon/dev-shop' />
             </p>
         )
     } as DropdownSectionItem,
