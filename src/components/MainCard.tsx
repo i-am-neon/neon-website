@@ -37,7 +37,7 @@ export default function MainCard({
           <Avatar />
           <PointerAnimation />
           <h1 className="font-dunerise text-primary mt-4 text-4xl">neon</h1>
-          <p className="my-2">Artist & Engineer</p>
+          <p className="my-2">Engineer</p>
           <div>
             <Socials />
           </div>

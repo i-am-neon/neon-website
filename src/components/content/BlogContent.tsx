@@ -17,14 +17,19 @@ export default function BlogContent(): JSX.Element {
 
 const aiProjectsContent: DropdownSectionItem[] = [
   {
-    heading: "How to Architect an LLM-powered Web App (Next.js, AI SDK)",
+    heading: "How to Architect an LLM-powered Web App",
     isOpenSource: true,
     content: (
       <p>
         <i>December '24</i>
         <br />
+        <br />
         The patterns for clean code don't change because LLMs are involved —
         here's how you can adapt them to AI-powered apps.
+        <br />
+        <br />
+        This example uses Next.js, TypeScript, Vercel's AI SDK, Zod, OpenAI, and
+        Flux, but the concepts apply to any stack.
         <br />
         <br />
         <div className="flex gap-2">
