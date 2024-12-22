@@ -13,6 +13,32 @@ import {
 
 export const aiProjectsContent: DropdownSectionItem[] = [
   {
+    heading: "FE Infinity",
+    isOpenSource: true,
+    content: (
+      <p>
+        <i>December '24</i>
+        <br />
+        <br />
+        FE Infinity is a system that uses AI to generate original Fire Emblem
+        Gameboy Advance games.
+        <br />
+        <br />
+        Video demo and architecture overview:
+        <a href="https://youtu.be/-bf9_vbjbSQ" target="_blank" rel="noreferrer">
+          <img
+            className="rounded-md w-full"
+            src="projectScreenshots/fe-infinity.jpg"
+            alt="Cerebellum Loom Video Screenshot"
+          />
+        </a>
+        <br />
+        <br />
+        <GitHubIconLink href="https://github.com/i-am-neon/fe-infinity" />
+      </p>
+    ),
+  } as DropdownSectionItem,
+  {
     heading: "Cerebellum",
     isOpenSource: true,
     content: (
