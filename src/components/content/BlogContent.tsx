@@ -17,6 +17,35 @@ export default function BlogContent(): JSX.Element {
 
 const aiProjectsContent: DropdownSectionItem[] = [
   {
+    heading: "How to Make an LLM Choose From a Long List Using RAG",
+    isOpenSource: true,
+    content: (
+      <p>
+        <i>December '24</i>
+        <br />
+        <br />
+        LLMs have issues when choosing specific items out of very long lists.
+        Use RAG to fix this.
+        <br />
+        <br />
+        <div className="flex gap-2">
+          <MediumArticleHubPillLink
+            title="Medium Article"
+            href="https://medium.com/@tommywilczek/how-to-make-an-llm-choose-from-a-very-long-list-using-retrieval-augmented-generation-rag-dfa67aaafb41"
+          />
+          <YouTubeHubPillLink
+            title="YouTube Video"
+            href="https://youtu.be/E-2f5AwP19Y"
+          />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/i-am-neon/llm-choose-from-long-list"
+          />
+        </div>
+      </p>
+    ),
+  } as DropdownSectionItem,
+  {
     heading: "How to Architect an LLM-powered Web App",
     isOpenSource: true,
     content: (
