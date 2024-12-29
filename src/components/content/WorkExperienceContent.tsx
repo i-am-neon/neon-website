@@ -8,10 +8,10 @@ export default function WorkExperienceContent(): JSX.Element {
         title={<span>Current</span>}
         content={[
           {
-            heading: "Founder at Infinit Games",
+            heading: "Exploring",
             content: (
               <p>
-                <i>July &apos;24 - Present</i>
+                <i>September &apos;24 - Present</i>
                 <br />
                 <br />
                 {/* <i>
@@ -20,7 +20,9 @@ export default function WorkExperienceContent(): JSX.Element {
                     South Park Commons
                   </ExternalLink>
                 </i> */}
-                I'm creating a video game that creates itself as you play it.
+                {/* I'm creating a video game that creates itself as you play it. */}
+                I'm exploring my interests. See "blog + vlog" for learnings from
+                my explorations.
               </p>
             ),
           },
