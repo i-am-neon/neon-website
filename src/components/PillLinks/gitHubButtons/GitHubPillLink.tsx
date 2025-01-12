@@ -1,4 +1,4 @@
-import GitHubIconSvg from "./GitHubIconSvg";
+import { Github } from "lucide-react";
 
 type GitHubPillLinkProps = {
   title: string;
@@ -16,8 +16,9 @@ export default function GitHubPillLink({ title, href }: GitHubPillLinkProps) {
       >
         <span className="text-sm mr-1">{title}</span>
         <span className="sr-only">Github Repository</span>
-        <GitHubIconSvg />
+        <Github className="h-4 w-4" color="currentColor" />
       </a>
     </button>
   );
 }
+

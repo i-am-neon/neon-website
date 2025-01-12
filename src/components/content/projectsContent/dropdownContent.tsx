@@ -1,7 +1,7 @@
 import { DropdownSectionItem } from "../../../types/DropdownSectionItem";
 import ExternalLink from "../../ExternalLink";
-import GitHubIconLink from "../../PillLinks/gitHubButtons/GitHubIconLink";
 import GitHubPillLink from "../../PillLinks/gitHubButtons/GitHubPillLink";
+import YouTubeHubPillLink from "../../PillLinks/YouTubePillLink";
 import { AspectRatio } from "../../shadcn/ui/aspect-ratio";
 import {
   Carousel,
@@ -33,8 +33,16 @@ export const aiProjectsContent: DropdownSectionItem[] = [
           />
         </a>
         <br />
-        <br />
-        <GitHubIconLink href="https://github.com/i-am-neon/fe-infinity" />
+        <div className="flex gap-2">
+          <YouTubeHubPillLink
+            title="YouTube Video"
+            href="https://youtu.be/-bf9_vbjbSQ"
+          />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/i-am-neon/fe-infinity"
+          />
+        </div>
       </p>
     ),
   } as DropdownSectionItem,
@@ -68,7 +76,16 @@ export const aiProjectsContent: DropdownSectionItem[] = [
         notes. It is built with OpenAI's GPT-4, DALL-E, Whisper, and Next.js.
         <br />
         <br />
-        <GitHubIconLink href="https://github.com/EthosWallet/spc-hackathon" />
+        <div className="flex gap-2">
+          <YouTubeHubPillLink
+            title="Demo Video"
+            href="https://www.loom.com/share/27ae4e8c5a1e445981f73aef5281d622?sid=2d4c5534-7396-4af2-83c5-4700cfd87d0c"
+          />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/EthosWallet/spc-hackathon"
+          />
+        </div>
       </p>
     ),
   } as DropdownSectionItem,
@@ -111,8 +128,12 @@ export const aiProjectsContent: DropdownSectionItem[] = [
           </li>
         </ul>
         <br />
-        <br />
-        <GitHubIconLink href="https://github.com/i-am-neon/dev-shop" />
+        <div className="flex gap-2">
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/i-am-neon/dev-shop"
+          />
+        </div>
       </p>
     ),
   } as DropdownSectionItem,
@@ -200,7 +221,10 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         Arweave.
         <br />
         <br />
-        <GitHubIconLink href="https://github.com/0xNeon-opensource/color-changing-noun-nft" />
+        <GitHubPillLink
+          title="Code"
+          href="https://github.com/0xNeon-opensource/color-changing-noun-nft"
+        />
       </p>
     ),
   } as DropdownSectionItem,
@@ -213,7 +237,10 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
         NFT images and metadata to Arweave.
         <br />
         <br />
-        <GitHubIconLink href="https://github.com/0xNeon-opensource/arweave-nft-uploader" />
+        <GitHubPillLink
+          title="Code"
+          href="https://github.com/0xNeon-opensource/arweave-nft-uploader"
+        />
       </p>
     ),
   } as DropdownSectionItem,
@@ -248,7 +275,10 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
             solconverter.com
           </ExternalLink>
           <span className="mx-2"></span>
-          <GitHubIconLink href="https://github.com/0xNeon-opensource/solconverter" />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/0xNeon-opensource/solconverter"
+          />
         </span>
         <br />
         <span className="flex">
@@ -256,7 +286,10 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
             arconverter.com
           </ExternalLink>
           <span className="mx-2"></span>
-          <GitHubIconLink href="https://github.com/0xNeon-opensource/arconverter" />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/0xNeon-opensource/arconverter"
+          />
         </span>
       </p>
     ),

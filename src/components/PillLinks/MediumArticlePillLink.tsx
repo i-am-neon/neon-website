@@ -19,7 +19,7 @@ export default function MediumArticleHubPillLink({
       >
         <span className="text-sm mr-1">{title}</span>
         <span className="sr-only">Medium Article</span>
-        <BookOpen className="h-5 w-5" color="currentColor" />
+        <BookOpen className="h-4 w-4" color="currentColor" />
       </a>
     </button>
   );

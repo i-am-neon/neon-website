@@ -19,7 +19,7 @@ export default function YouTubeHubPillLink({
       >
         <span className="text-sm mr-1">{title}</span>
         <span className="sr-only">Medium Article</span>
-        <Youtube className="h-5 w-5" color="currentColor" />
+        <Youtube className="h-4 w-4" color="currentColor" />
       </a>
     </button>
   );
