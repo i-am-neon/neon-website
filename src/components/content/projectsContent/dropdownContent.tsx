@@ -13,6 +13,71 @@ import {
 
 export const aiProjectsContent: DropdownSectionItem[] = [
   {
+    heading: "Scene Creator",
+    isOpenSource: true,
+    content: (
+      <p>
+        <i>Jan '25</i>
+        <br />
+        <br />
+        Scene Creator is an LLM-powered web app that creates stories. It uses AI
+        to create characters: complete with images and voice. It creates
+        scripted scenes between the characters and creates images and music to
+        go along with the scenes.
+        <br />
+        <br />
+        <div className="space-y-2">
+          <p>It uses:</p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <ExternalLink to="https://claude.ai/">Claude</ExternalLink> as the
+              LLM
+            </li>
+            <li>
+              <ExternalLink to="https://replicate.com/black-forest-labs/flux-1.1-pro-ultra">
+                Flux
+              </ExternalLink>{" "}
+              hosted on Replicate for image generation
+            </li>
+            <li>
+              <ExternalLink to="https://elevenlabs.io/">
+                ElevenLabs
+              </ExternalLink>{" "}
+              for voice generation
+            </li>
+            <li>
+              <ExternalLink to="https://replicate.com/meta/musicgen">
+                {"Meta's musicgen"}
+              </ExternalLink>{" "}
+              for music generation
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        Demo video:
+        <a href="https://youtu.be/BFdUyKYq_bY" target="_blank" rel="noreferrer">
+          <img
+            className="rounded-md w-full"
+            src="projectScreenshots/scene-creator.jpg"
+            alt="Scene Creator Video Screenshot"
+          />
+        </a>
+        <br />
+        <div className="flex gap-2">
+          <YouTubeHubPillLink
+            title="YouTube Video"
+            href="https://youtu.be/BFdUyKYq_bY"
+          />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/i-am-neon/scene-creator"
+          />
+        </div>
+      </p>
+    ),
+  } as DropdownSectionItem,
+  {
     heading: "FE Infinity",
     isOpenSource: true,
     content: (
@@ -142,7 +207,10 @@ export const aiProjectsContent: DropdownSectionItem[] = [
     isOpenSource: true,
     content: (
       <p>
-        <i>Oct '21 - GPT-3 API + Ethereum + Arweave</i>
+        <i>Oct '21</i>
+        <br />
+        <br />
+        <i>GPT-3 Pre-Release + Ethereum + Arweave</i>
         <br />
         <br />
         <Carousel className="mx-12">
@@ -167,8 +235,9 @@ export const aiProjectsContent: DropdownSectionItem[] = [
         <br />
         <br />
         With a combination of generative art and natural language processing,
-        this project provides a space for people to collaborate with an AI to
-        create a poem that is eternalized on the blockchain.
+        this project provides a space for people to collaborate with the{" "}
+        <strong>GPT-3 pre-release</strong> to create a poem that is eternalized
+        on the blockchain.
         <br />
         <br />
         Minters also received a physical copy of their haiku on real handmade
@@ -209,6 +278,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
     isOpenSource: true,
     content: (
       <p>
+        <i>April '22</i>
+        <br />
+        <br />
         <img
           className="mx-auto"
           src="https://media.giphy.com/media/7SrmPnpz1mI2bvdmRy/giphy.gif"
@@ -233,6 +305,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
     isOpenSource: true,
     content: (
       <p>
+        <i>March '22</i>
+        <br />
+        <br />
         An NPM Package with over 1,000 downloads that makes it easy to upload
         NFT images and metadata to Arweave.
         <br />
@@ -249,6 +324,9 @@ export const web3ProjectsContent: DropdownSectionItem[] = [
     isOpenSource: true,
     content: (
       <p className="w-full">
+        <i>March '22</i>
+        <br />
+        <br />
         <i>The #1 converter tool in the Solana and Arweave ecosystems!</i>
         <br />
         <br />
@@ -302,9 +380,10 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
     isOpenSource: true,
     content: (
       <p>
-        <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
-        <br />
         <i>May '24</i>
+        <br />
+        <br />
+        <img className="rounded-md" src="raveCape/rave-cape.gif" alt="" />
         <br />
         <br />
         I hand-crafted a unique LED cape controlled by an ESP32 with a custom
@@ -312,6 +391,85 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
         <br />
         <br />
         Open source mobile app and hardware schematics coming soon.
+      </p>
+    ),
+  } as DropdownSectionItem,
+  {
+    heading: "Cryptocurrency Mining Rigs",
+    isOpenSource: true,
+    content: (
+      <p className="w-full">
+        <i>April - Dec '21</i>
+        <br />
+        <br />
+        I learned a ton about Linux and hardware from these projects!
+        <br />
+        <br />
+        <Carousel className="mx-12">
+          <CarouselContent>
+            <CarouselItem>
+              <AspectRatio
+                ratio={1}
+                className="flex items-center bg-transparent"
+              >
+                <img
+                  src="miningRigs/dense.jpg"
+                  alt=""
+                  className="object-cover"
+                />
+              </AspectRatio>
+            </CarouselItem>
+            <CarouselItem>
+              <AspectRatio
+                ratio={1}
+                className="flex items-center bg-transparent"
+              >
+                <img
+                  src="miningRigs/rig-dog.jpg"
+                  alt=""
+                  className="object-cover"
+                />
+              </AspectRatio>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious variant="secondary" />
+          <CarouselNext variant="secondary" />
+        </Carousel>
+        <br />
+        <br />
+        I Constructed five linux machines each with different specialized
+        hardware for various cryptocurrency mining:
+        <br />
+        <br />
+        <ul className="list-disc flex flex-col gap-2">
+          <li>
+            <strong>Ethereum</strong>: High power and many graphics cards (back
+            when Eth was Proof-of-Work)
+          </li>
+          <li>
+            <strong>Arweave and Chia</strong>: Dense storage computers totalling
+            over half a petabyte
+          </li>
+          <li>
+            <strong>Monero</strong>: Strong CPUs with a lot of RAM
+          </li>
+        </ul>
+        <br />
+        <br />
+        I wrote advanced custom software to monitor and manage the hardware,
+        including protocols for power outages.
+        <br />
+        <br />
+        <div className="flex gap-2">
+          <GitHubPillLink
+            title="Eth Rig Controller"
+            href="https://github.com/i-am-neon/ethereum-mining-rig-controller"
+          />
+          <GitHubPillLink
+            title="Chia Plotter"
+            href="https://github.com/i-am-neon/crypto-chia-plotter"
+          />
+        </div>
       </p>
     ),
   } as DropdownSectionItem,
@@ -401,85 +559,6 @@ export const physicalProjectsContent: DropdownSectionItem[] = [
           <CarouselPrevious variant="secondary" />
           <CarouselNext variant="secondary" />
         </Carousel>
-      </p>
-    ),
-  } as DropdownSectionItem,
-  {
-    heading: "Cryptocurrency Mining Rigs",
-    isOpenSource: true,
-    content: (
-      <p className="w-full">
-        <i>April - Dec '21</i>
-        <br />
-        <br />
-        I learned a ton about Linux and hardware from these projects!
-        <br />
-        <br />
-        <Carousel className="mx-12">
-          <CarouselContent>
-            <CarouselItem>
-              <AspectRatio
-                ratio={1}
-                className="flex items-center bg-transparent"
-              >
-                <img
-                  src="miningRigs/dense.jpg"
-                  alt=""
-                  className="object-cover"
-                />
-              </AspectRatio>
-            </CarouselItem>
-            <CarouselItem>
-              <AspectRatio
-                ratio={1}
-                className="flex items-center bg-transparent"
-              >
-                <img
-                  src="miningRigs/rig-dog.jpg"
-                  alt=""
-                  className="object-cover"
-                />
-              </AspectRatio>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious variant="secondary" />
-          <CarouselNext variant="secondary" />
-        </Carousel>
-        <br />
-        <br />
-        I Constructed five linux machines each with different specialized
-        hardware for various cryptocurrency mining:
-        <br />
-        <br />
-        <ul className="list-disc flex flex-col gap-2">
-          <li>
-            <strong>Ethereum</strong>: High power and many graphics cards (back
-            when Eth was Proof-of-Work)
-          </li>
-          <li>
-            <strong>Arweave and Chia</strong>: Dense storage computers totalling
-            over half a petabyte
-          </li>
-          <li>
-            <strong>Monero</strong>: Strong CPUs with a lot of RAM
-          </li>
-        </ul>
-        <br />
-        <br />
-        I wrote advanced custom software to monitor and manage the hardware,
-        including protocols for power outages.
-        <br />
-        <br />
-        <div className="flex gap-2">
-          <GitHubPillLink
-            title="Eth Rig Controller"
-            href="https://github.com/i-am-neon/ethereum-mining-rig-controller"
-          />
-          <GitHubPillLink
-            title="Chia Plotter"
-            href="https://github.com/i-am-neon/crypto-chia-plotter"
-          />
-        </div>
       </p>
     ),
   } as DropdownSectionItem,
