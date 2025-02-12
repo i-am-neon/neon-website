@@ -17,6 +17,35 @@ export default function BlogContent(): JSX.Element {
 
 const aiProjectsContent: DropdownSectionItem[] = [
   {
+    heading: "How to Add Emotion to AI Voices",
+    isOpenSource: true,
+    content: (
+      <p>
+        <i>Jan '25</i>
+        <br />
+        <br />
+        Voice actors hate him! Learn how to add emotion to ElevenLabs voices
+        with this weird trick.
+        <br />
+        <br />
+        <div className="flex gap-2">
+          <MediumArticleHubPillLink
+            title="Medium Article"
+            href="https://medium.com/@tommywilczek/how-to-add-emotion-to-ai-voices-elevenlabs-2025-92cc00d3cb5d"
+          />
+          <YouTubeHubPillLink
+            title="YouTube Video"
+            href="https://youtu.be/ZFdW--YfjjM"
+          />
+          <GitHubPillLink
+            title="Code"
+            href="https://github.com/i-am-neon/emotional-elevenlabs-voices"
+          />
+        </div>
+      </p>
+    ),
+  } as DropdownSectionItem,
+  {
     heading: "How to Make an LLM Choose From a Long List Using RAG",
     isOpenSource: true,
     content: (
