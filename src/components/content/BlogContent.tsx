@@ -24,8 +24,7 @@ const aiProjectsContent: DropdownSectionItem[] = [
         <i>Jan '25</i>
         <br />
         <br />
-        Voice actors hate him! Learn how to add emotion to ElevenLabs voices
-        with this weird trick.
+        Learn how to add emotion to ElevenLabs voices.
         <br />
         <br />
         <div className="flex gap-2">
